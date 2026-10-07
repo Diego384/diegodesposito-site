@@ -1,0 +1,110 @@
+name: Deploy website to IONOS
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - index.html
+      - styles.css
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ionos-production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # Leave deployments disabled until the restricted IONOS account and GitHub
+    # variables/secrets have been configured.
+    if: vars.IONOS_DEPLOY_ENABLED == 'true' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out the published source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Validate deployment settings
+        shell: bash
+        env:
+          IONOS_HOST: ${{ vars.IONOS_HOST }}
+          IONOS_USER: ${{ vars.IONOS_DEPLOY_USER }}
+          IONOS_WEB_ROOT: ${{ vars.IONOS_WEB_ROOT }}
+        run: |
+          set -euo pipefail
+          : "${IONOS_HOST:?Set the IONOS_HOST Actions variable}"
+          : "${IONOS_USER:?Set the IONOS_DEPLOY_USER Actions variable}"
+          : "${IONOS_WEB_ROOT:?Set the IONOS_WEB_ROOT Actions variable}"
+          [[ "$IONOS_WEB_ROOT" =~ ^/[A-Za-z0-9_./-]+$ ]] || {
+            echo "IONOS_WEB_ROOT must be an absolute path without spaces or shell characters."
+            exit 1
+          }
+          test -s index.html
+          test -s styles.css
+
+      - name: Prepare SSH with pinned host key
+        shell: bash
+        env:
+          IONOS_PRIVATE_KEY: ${{ secrets.IONOS_SSH_PRIVATE_KEY }}
+          IONOS_KNOWN_HOSTS: ${{ secrets.IONOS_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          : "${IONOS_PRIVATE_KEY:?Set the IONOS_SSH_PRIVATE_KEY Actions secret}"
+          : "${IONOS_KNOWN_HOSTS:?Set the verified IONOS_KNOWN_HOSTS Actions secret}"
+          install -m 700 -d "$HOME/.ssh"
+          printf '%s\n' "$IONOS_PRIVATE_KEY" > "$HOME/.ssh/ionos_deploy_key"
+          printf '%s\n' "$IONOS_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/ionos_deploy_key" "$HOME/.ssh/known_hosts"
+
+      - name: Check that the deploy account can write to the website folder
+        shell: bash
+        env:
+          IONOS_HOST: ${{ vars.IONOS_HOST }}
+          IONOS_USER: ${{ vars.IONOS_DEPLOY_USER }}
+          IONOS_WEB_ROOT: ${{ vars.IONOS_WEB_ROOT }}
+        run: |
+          set -euo pipefail
+          ssh \
+            -i "$HOME/.ssh/ionos_deploy_key" \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=15 \
+            "$IONOS_USER@$IONOS_HOST" \
+            "test -d '$IONOS_WEB_ROOT' && test -w '$IONOS_WEB_ROOT'"
+
+      - name: Copy the website files to IONOS
+        shell: bash
+        env:
+          IONOS_HOST: ${{ vars.IONOS_HOST }}
+          IONOS_USER: ${{ vars.IONOS_DEPLOY_USER }}
+          IONOS_WEB_ROOT: ${{ vars.IONOS_WEB_ROOT }}
+        run: |
+          set -euo pipefail
+          scp \
+            -i "$HOME/.ssh/ionos_deploy_key" \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=15 \
+            styles.css "$IONOS_USER@$IONOS_HOST:$IONOS_WEB_ROOT/styles.css"
+          scp \
+            -i "$HOME/.ssh/ionos_deploy_key" \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=15 \
+            index.html "$IONOS_USER@$IONOS_HOST:$IONOS_WEB_ROOT/index.html"
+
+      - name: Verify the public homepage
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --compressed \
+            https://diegodesposito.it/ \
+            --output "$RUNNER_TEMP/deployed-index.html"
+          cmp --silent index.html "$RUNNER_TEMP/deployed-index.html"

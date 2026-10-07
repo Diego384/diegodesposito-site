@@ -11,6 +11,4 @@ La bozza usa i servizi, le tecnologie e i progetti già pubblicati su [diegodesp
 
 ## Pubblicazione
 
-Il repository GitHub può conservare e versionare il codice. Per il sito orientato a presentare l'attività e acquisire clienti, verifica prima le regole aggiornate del provider: la documentazione GitHub Pages esclude l'uso del servizio gratuito come hosting per siti diretti a promuovere o gestire un'attività commerciale. Se hai già un hosting associato al dominio ufficiale, il codice statico può essere pubblicato lì; in questo modo il dominio resta l'indirizzo visibile. Una sincronizzazione dal repository si può configurare in seguito.
-
-Documentazione: https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
+GitHub conserva e versiona il codice; il sito pubblico resta servito dal VPS IONOS tramite Nginx. Il repository include un workflow GitHub Actions per copiare automaticamente `index.html` e `styles.css` sul VPS a ogni push su `main`. Il workflow rimane disattivato fino alla configurazione di un account SSH di deploy senza privilegi root e dei relativi segreti e variabili in GitHub. Vedi [DEPLOY.md](DEPLOY.md) per i passaggi richiesti.
