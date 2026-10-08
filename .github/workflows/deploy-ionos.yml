@@ -60,7 +60,7 @@ jobs:
           printf '%s\n' "$IONOS_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
           chmod 600 "$HOME/.ssh/ionos_deploy_key" "$HOME/.ssh/known_hosts"
 
-      - name: Check that the deploy account can write to the website folder
+      - name: Copy the website files over SFTP
         shell: bash
         env:
           IONOS_HOST: ${{ vars.IONOS_HOST }}
@@ -68,37 +68,16 @@ jobs:
           IONOS_WEB_ROOT: ${{ vars.IONOS_WEB_ROOT }}
         run: |
           set -euo pipefail
-          ssh \
+          sftp -b - \
             -i "$HOME/.ssh/ionos_deploy_key" \
-            -o BatchMode=yes \
-            -o IdentitiesOnly=yes \
-            -o StrictHostKeyChecking=yes \
-            -o ConnectTimeout=15 \
-            "$IONOS_USER@$IONOS_HOST" \
-            "test -d '$IONOS_WEB_ROOT' && test -w '$IONOS_WEB_ROOT'"
-
-      - name: Copy the website files to IONOS
-        shell: bash
-        env:
-          IONOS_HOST: ${{ vars.IONOS_HOST }}
-          IONOS_USER: ${{ vars.IONOS_DEPLOY_USER }}
-          IONOS_WEB_ROOT: ${{ vars.IONOS_WEB_ROOT }}
-        run: |
-          set -euo pipefail
-          scp \
-            -i "$HOME/.ssh/ionos_deploy_key" \
-            -o BatchMode=yes \
-            -o IdentitiesOnly=yes \
-            -o StrictHostKeyChecking=yes \
-            -o ConnectTimeout=15 \
-            styles.css "$IONOS_USER@$IONOS_HOST:$IONOS_WEB_ROOT/styles.css"
-          scp \
-            -i "$HOME/.ssh/ionos_deploy_key" \
-            -o BatchMode=yes \
-            -o IdentitiesOnly=yes \
-            -o StrictHostKeyChecking=yes \
-            -o ConnectTimeout=15 \
-            index.html "$IONOS_USER@$IONOS_HOST:$IONOS_WEB_ROOT/index.html"
+            -oBatchMode=yes \
+            -oIdentitiesOnly=yes \
+            -oStrictHostKeyChecking=yes \
+            -oConnectTimeout=15 \
+            "$IONOS_USER@$IONOS_HOST" <<EOF
+          put styles.css $IONOS_WEB_ROOT/styles.css
+          put index.html $IONOS_WEB_ROOT/index.html
+          EOF
 
       - name: Verify the public homepage
         shell: bash

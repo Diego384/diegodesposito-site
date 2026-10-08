@@ -6,7 +6,7 @@ Il workflow è volutamente disattivato finché non viene configurato l'accesso d
 
 ## Configurazione richiesta
 
-1. Sul VPS, predisporre un utente SSH dedicato, senza privilegi `sudo`, con permesso di scrittura soltanto sulla directory del sito gestita da Nginx. Il relativo accesso deve usare una chiave SSH dedicata e revocabile.
+1. Sul VPS, predisporre un utente SFTP dedicato, senza shell e senza privilegi `sudo`, con permesso di scrittura soltanto sulla document root gestita da Nginx. L'accesso deve usare una chiave SSH dedicata e revocabile.
 2. Verificare la chiave host SSH del VPS tramite la console o un canale IONOS attendibile; non fidarsi di una chiave ottenuta al volo da GitHub Actions.
 3. In GitHub, aprire **Settings → Secrets and variables → Actions** e aggiungere questi repository secrets:
    - `IONOS_SSH_PRIVATE_KEY`: chiave privata dedicata al deploy;
