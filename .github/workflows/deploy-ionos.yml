@@ -33,16 +33,10 @@ jobs:
         env:
           IONOS_HOST: ${{ vars.IONOS_HOST }}
           IONOS_USER: ${{ vars.IONOS_DEPLOY_USER }}
-          IONOS_WEB_ROOT: ${{ vars.IONOS_WEB_ROOT }}
         run: |
           set -euo pipefail
           : "${IONOS_HOST:?Set the IONOS_HOST Actions variable}"
           : "${IONOS_USER:?Set the IONOS_DEPLOY_USER Actions variable}"
-          : "${IONOS_WEB_ROOT:?Set the IONOS_WEB_ROOT Actions variable}"
-          [[ "$IONOS_WEB_ROOT" =~ ^/[A-Za-z0-9_./-]+$ ]] || {
-            echo "IONOS_WEB_ROOT must be an absolute path without spaces or shell characters."
-            exit 1
-          }
           test -s index.html
           test -s styles.css
 
@@ -60,12 +54,11 @@ jobs:
           printf '%s\n' "$IONOS_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
           chmod 600 "$HOME/.ssh/ionos_deploy_key" "$HOME/.ssh/known_hosts"
 
-      - name: Copy the website files over SFTP
+      - name: Copy the website files into the restricted SFTP jail
         shell: bash
         env:
           IONOS_HOST: ${{ vars.IONOS_HOST }}
           IONOS_USER: ${{ vars.IONOS_DEPLOY_USER }}
-          IONOS_WEB_ROOT: ${{ vars.IONOS_WEB_ROOT }}
         run: |
           set -euo pipefail
           sftp -b - \
@@ -75,8 +68,8 @@ jobs:
             -oStrictHostKeyChecking=yes \
             -oConnectTimeout=15 \
             "$IONOS_USER@$IONOS_HOST" <<EOF
-          put styles.css $IONOS_WEB_ROOT/styles.css
-          put index.html $IONOS_WEB_ROOT/index.html
+          put styles.css /styles.css
+          put index.html /index.html
           EOF
 
       - name: Verify the public homepage
