@@ -6,7 +6,7 @@ Il workflow è volutamente disattivato finché non viene configurato l'accesso d
 
 ## Configurazione richiesta
 
-1. Sul VPS, predisporre un utente SFTP dedicato, senza shell utilizzabile e senza privilegi `sudo`, confinato con `ChrootDirectory /var/www/portfolio`. Il chroot deve restare `root:root` e non scrivibile dall'utente. Concedere scrittura soltanto ai file `index.html` e `styles.css` (l'utente non deve poter creare o rimuovere file nella cartella). L'accesso deve usare una chiave SSH dedicata e revocabile.
+1. Da PuTTY, rivedere ed eseguire una volta come `root` lo script [setup-ionos-deploy.sh](setup-ionos-deploy.sh). Verifica la document root `/var/www/portfolio`, crea l'utente SFTP confinato e concede scrittura solo a `index.html` e `styles.css`. Non riavvia Nginx; valida la configurazione SSH prima di ricaricarla.
 2. Verificare la chiave host SSH del VPS tramite la console o un canale IONOS attendibile; non fidarsi di una chiave ottenuta al volo da GitHub Actions.
 3. In GitHub, aprire **Settings → Secrets and variables → Actions** e aggiungere questi repository secrets:
    - `IONOS_SSH_PRIVATE_KEY`: chiave privata dedicata al deploy;
