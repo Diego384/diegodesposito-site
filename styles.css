@@ -285,6 +285,24 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4.2vw, 54px); line-height: 1.06; }
 @media(max-width:950px) { .local-offer-heading { gap: 34px; } }
 @media(max-width:650px) { .local-offer { padding-top: 70px; padding-bottom: 73px; } .local-offer-heading { display: block; margin-bottom: 27px; } .local-offer-heading h2 { font-size: 39px; } .local-offer-copy { margin-top: 18px; } .local-offer-grid { grid-template-columns: 1fr; gap: 10px; } .local-offer-card { min-height: auto; padding: 18px; } .local-offer-card h3 { margin-top: 15px; } .local-offer-bottom { display: block; } .local-offer-bottom .button { margin-top: 4px; } }
 
+.restaurant-service { padding: 82px 0 86px; border-top: 1px solid var(--line); }
+.restaurant-service-heading { display: grid; grid-template-columns: 1.08fr .92fr; gap: 68px; align-items: end; margin-bottom: 32px; }
+.restaurant-service-heading .eyebrow { margin-bottom: 17px; }
+.restaurant-service-heading h2 { max-width: 680px; margin: 0; font-size: clamp(35px, 4.1vw, 51px); }
+.restaurant-service-heading > p, .restaurant-service-card p, .restaurant-service-bottom p { color: var(--muted); font-size: 12px; line-height: 1.9; }
+.restaurant-service-heading > p { margin: 0 0 3px; }
+.restaurant-service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
+.restaurant-service-card { min-height: 174px; padding: 23px; border: 1px solid var(--line); background: rgba(255,255,255,.58); }
+.restaurant-service-card > span { color: var(--green); font: 9px Consolas, monospace; letter-spacing: .045em; }
+.restaurant-service-card h3 { margin: 23px 0 9px; font: 600 15px 'Manrope','Segoe UI',sans-serif; letter-spacing: -.035em; }
+.restaurant-service-card p { margin: 0; font-size: 10px; line-height: 1.8; }
+.restaurant-service-bottom { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 24px; }
+.restaurant-service-bottom > div { max-width: 660px; }
+.restaurant-service-bottom h3 { margin: 0 0 8px; font: 600 15px 'Manrope','Segoe UI',sans-serif; letter-spacing: -.035em; }
+.restaurant-service-bottom p { margin: 0; font-size: 10px; }
+@media(max-width:950px) { .restaurant-service-heading { gap: 34px; } }
+@media(max-width:650px) { .restaurant-service { padding: 68px 0 72px; } .restaurant-service-heading { display: block; margin-bottom: 25px; } .restaurant-service-heading h2 { font-size: 38px; } .restaurant-service-heading > p { margin-top: 18px; } .restaurant-service-grid { grid-template-columns: 1fr; gap: 10px; } .restaurant-service-card { min-height: auto; padding: 18px; } .restaurant-service-card h3 { margin-top: 15px; } .restaurant-service-bottom { display: block; } .restaurant-service-bottom .button { margin-top: 17px; } }
+
 @media (max-width: 950px) {
   .main-nav { gap: 15px; font-size: 11px; }
   .projects-heading { gap: 30px; }
