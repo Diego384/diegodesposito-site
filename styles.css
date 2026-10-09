@@ -268,6 +268,23 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4.2vw, 54px); line-height: 1.06; }
 .about-copy > p:not(.eyebrow) { color: #686a7c; }
 .footer-brand { color: #45445b; }
 
+.local-offer { padding-top: 98px; padding-bottom: 92px; border-top: 1px solid var(--line); }
+.local-offer-heading { display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: end; margin-bottom: 37px; }
+.local-offer-heading .eyebrow { margin-bottom: 17px; }
+.local-offer-heading h2 { max-width: 650px; margin: 0; font-size: clamp(36px,4.2vw,53px); }
+.local-offer-copy { padding-bottom: 3px; }
+.local-offer-copy p,.local-offer-bottom p { color: var(--muted); font-size: 12px; line-height: 1.85; }
+.local-offer-copy p:last-child { margin-bottom: 0; }
+.local-offer-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 13px; }
+.local-offer-card { min-height: 177px; padding: 22px; border: 1px solid var(--line); background: rgba(255,255,255,.58); }
+.local-offer-card > span { color: var(--green); font: 9px Consolas,monospace; letter-spacing: .045em; }
+.local-offer-card h3 { margin: 24px 0 9px; font: 600 15px 'Manrope','Segoe UI',sans-serif; letter-spacing: -.035em; }
+.local-offer-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
+.local-offer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 23px; }
+.local-offer-bottom p { max-width: 640px; margin: 0; font-size: 10px; }
+@media(max-width:950px) { .local-offer-heading { gap: 34px; } }
+@media(max-width:650px) { .local-offer { padding-top: 70px; padding-bottom: 73px; } .local-offer-heading { display: block; margin-bottom: 27px; } .local-offer-heading h2 { font-size: 39px; } .local-offer-copy { margin-top: 18px; } .local-offer-grid { grid-template-columns: 1fr; gap: 10px; } .local-offer-card { min-height: auto; padding: 18px; } .local-offer-card h3 { margin-top: 15px; } .local-offer-bottom { display: block; } .local-offer-bottom .button { margin-top: 4px; } }
+
 @media (max-width: 950px) {
   .main-nav { gap: 15px; font-size: 11px; }
   .projects-heading { gap: 30px; }
