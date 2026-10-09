@@ -7,6 +7,8 @@ on:
     paths:
       - index.html
       - styles.css
+      - robots.txt
+      - sitemap.xml
   workflow_dispatch:
 
 permissions:
@@ -18,8 +20,8 @@ concurrency:
 
 jobs:
   deploy:
-    # Leave deployments disabled until the restricted IONOS account and GitHub
-    # variables/secrets have been configured.
+    # Run only after the restricted IONOS account and GitHub variables/secrets
+    # have been configured and deployment has been explicitly enabled.
     if: vars.IONOS_DEPLOY_ENABLED == 'true' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -39,6 +41,8 @@ jobs:
           : "${IONOS_USER:?Set the IONOS_DEPLOY_USER Actions variable}"
           test -s index.html
           test -s styles.css
+          test -s robots.txt
+          test -s sitemap.xml
 
       - name: Prepare SSH with pinned host key
         shell: bash
@@ -70,6 +74,8 @@ jobs:
             "$IONOS_USER@$IONOS_HOST" <<EOF
           put styles.css /styles.css
           put index.html /index.html
+          put robots.txt /robots.txt
+          put sitemap.xml /sitemap.xml
           EOF
 
       - name: Verify the public homepage
@@ -80,3 +86,11 @@ jobs:
             https://diegodesposito.it/ \
             --output "$RUNNER_TEMP/deployed-index.html"
           cmp --silent index.html "$RUNNER_TEMP/deployed-index.html"
+          curl --fail --silent --show-error --location --compressed \
+            https://diegodesposito.it/robots.txt \
+            --output "$RUNNER_TEMP/deployed-robots.txt"
+          cmp --silent robots.txt "$RUNNER_TEMP/deployed-robots.txt"
+          curl --fail --silent --show-error --location --compressed \
+            https://diegodesposito.it/sitemap.xml \
+            --output "$RUNNER_TEMP/deployed-sitemap.xml"
+          cmp --silent sitemap.xml "$RUNNER_TEMP/deployed-sitemap.xml"

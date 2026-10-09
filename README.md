@@ -11,4 +11,4 @@ La bozza usa i servizi, le tecnologie e i progetti già pubblicati su [diegodesp
 
 ## Pubblicazione
 
-GitHub conserva e versiona il codice; il sito pubblico resta servito dal VPS IONOS tramite Nginx. Il repository include un workflow GitHub Actions per copiare automaticamente `index.html` e `styles.css` sul VPS a ogni push su `main`. Il workflow rimane disattivato fino alla configurazione di un account SSH di deploy senza privilegi root e dei relativi segreti e variabili in GitHub. Vedi [DEPLOY.md](DEPLOY.md) per i passaggi richiesti.
+GitHub conserva e versiona il codice; il sito pubblico resta servito dal VPS IONOS tramite Nginx. Il repository include un workflow GitHub Actions per copiare automaticamente i file pubblici del sito (`index.html`, `styles.css`, `robots.txt` e `sitemap.xml`) sul VPS a ogni push su `main`. Vedi [DEPLOY.md](DEPLOY.md) per i passaggi di deploy e per l'abilitazione dell'accesso SFTP ristretto ai file SEO.
