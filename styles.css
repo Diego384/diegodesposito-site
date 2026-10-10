@@ -282,6 +282,9 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4.2vw, 54px); line-height: 1.06; }
 .local-offer-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
 .local-offer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 23px; }
 .local-offer-bottom p { max-width: 640px; margin: 0; font-size: 10px; }
+.concept-portal-button { border: 1px solid var(--green); color: var(--green); background: transparent; white-space: nowrap; }
+.concept-portal-button:hover { color: #fff; background: var(--green-dark); }
+@media (max-width: 650px) { .local-offer-bottom .concept-portal-button { margin-top: 11px; } }
 @media(max-width:950px) { .local-offer-heading { gap: 34px; } }
 @media(max-width:650px) { .local-offer { padding-top: 70px; padding-bottom: 73px; } .local-offer-heading { display: block; margin-bottom: 27px; } .local-offer-heading h2 { font-size: 39px; } .local-offer-copy { margin-top: 18px; } .local-offer-grid { grid-template-columns: 1fr; gap: 10px; } .local-offer-card { min-height: auto; padding: 18px; } .local-offer-card h3 { margin-top: 15px; } .local-offer-bottom { display: block; } .local-offer-bottom .button { margin-top: 4px; } }
 

@@ -9,6 +9,7 @@ on:
       - styles.css
       - robots.txt
       - sitemap.xml
+      - proposte/**
   workflow_dispatch:
 
 permissions:
@@ -43,6 +44,11 @@ jobs:
           test -s styles.css
           test -s robots.txt
           test -s sitemap.xml
+          test -s proposte/index.html
+          test -s proposte/app.js
+          test -s proposte/proposte.css
+          test -s proposte/skin.css
+          test "$(find proposte -mindepth 3 -maxdepth 3 -type f -name index.html | wc -l)" -eq 10
 
       - name: Prepare SSH with pinned host key
         shell: bash
@@ -78,6 +84,29 @@ jobs:
           put sitemap.xml /sitemap.xml
           EOF
 
+      - name: Copy proposal previews into the restricted SFTP jail
+        shell: bash
+        env:
+          IONOS_HOST: ${{ vars.IONOS_HOST }}
+          IONOS_USER: ${{ vars.IONOS_DEPLOY_USER }}
+        run: |
+          set -euo pipefail
+          batch_file="$RUNNER_TEMP/proposte.sftp"
+          : > "$batch_file"
+          while IFS= read -r directory; do
+            printf -- '-mkdir /%s\n' "$directory" >> "$batch_file"
+          done < <(find proposte -type d -print | LC_ALL=C sort)
+          while IFS= read -r file; do
+            printf 'put %s /%s\n' "$file" "$file" >> "$batch_file"
+          done < <(find proposte -type f -print | LC_ALL=C sort)
+          sftp -b "$batch_file" \
+            -i "$HOME/.ssh/ionos_deploy_key" \
+            -oBatchMode=yes \
+            -oIdentitiesOnly=yes \
+            -oStrictHostKeyChecking=yes \
+            -oConnectTimeout=15 \
+            "$IONOS_USER@$IONOS_HOST"
+
       - name: Verify the public homepage
         shell: bash
         run: |
@@ -94,3 +123,16 @@ jobs:
             https://diegodesposito.it/sitemap.xml \
             --output "$RUNNER_TEMP/deployed-sitemap.xml"
           cmp --silent sitemap.xml "$RUNNER_TEMP/deployed-sitemap.xml"
+          for asset in app.js proposte.css skin.css index.html; do
+            curl --fail --silent --show-error --location --compressed \
+              "https://diegodesposito.it/proposte/$asset" \
+              --output "$RUNNER_TEMP/deployed-$asset"
+            cmp --silent "proposte/$asset" "$RUNNER_TEMP/deployed-$asset"
+          done
+          while IFS= read -r file; do
+            route="/$(dirname "$file")/"
+            curl --fail --silent --show-error --location --compressed \
+              "https://diegodesposito.it$route" \
+              --output "$RUNNER_TEMP/deployed-preview.html"
+            cmp --silent "$file" "$RUNNER_TEMP/deployed-preview.html"
+          done < <(find proposte -mindepth 3 -maxdepth 3 -type f -name index.html | LC_ALL=C sort)
