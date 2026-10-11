@@ -48,6 +48,7 @@ jobs:
           test -s proposte/app.js
           test -s proposte/proposte.css
           test -s proposte/skin.css
+          test -s proposte/pages.css
           test "$(find proposte -mindepth 2 -maxdepth 2 -type f -name index.html | wc -l)" -eq 10
 
       - name: Prepare SSH with pinned host key
@@ -123,7 +124,7 @@ jobs:
             https://diegodesposito.it/sitemap.xml \
             --output "$RUNNER_TEMP/deployed-sitemap.xml"
           cmp --silent sitemap.xml "$RUNNER_TEMP/deployed-sitemap.xml"
-          for asset in app.js proposte.css skin.css index.html; do
+          for asset in app.js proposte.css skin.css pages.css index.html; do
             curl --fail --silent --show-error --location --compressed \
               "https://diegodesposito.it/proposte/$asset" \
               --output "$RUNNER_TEMP/deployed-$asset"

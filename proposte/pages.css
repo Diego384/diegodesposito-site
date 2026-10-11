@@ -1,0 +1,531 @@
+.page-width{width:min(1210px,calc(100% - 80px));margin-inline:auto}
+.site-concept{overflow:hidden}
+.site-concept h1,.site-concept h2,.site-concept h3,.site-concept p{overflow-wrap:anywhere}
+.site-concept h1,.site-concept h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.065em}
+.site-concept h1{margin:0;font-size:clamp(52px,6vw,84px);line-height:.98}
+.site-concept h1 em,.site-concept h2 em{color:var(--accent);font-weight:400}
+.site-concept h2{font-size:clamp(36px,4vw,56px);line-height:1.03;margin:0}
+.site-concept p{line-height:1.8}
+.site-concept .overline{margin-bottom:20px}
+.section-kicker{margin:0 0 16px;color:var(--accent);font:700 9px/1.5 Consolas,monospace;letter-spacing:.14em;text-transform:uppercase}
+.source-pill{display:block;margin-top:24px;color:#77786e;font:9px/1.5 Consolas,monospace;letter-spacing:.045em}
+.page-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px 24px;margin-top:25px}
+.action-button{display:inline-flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:0 18px;background:var(--accent);color:#fff;text-decoration:none;font-size:11px;font-weight:650;transition:transform .2s,background .2s}
+.action-button:hover{transform:translateY(-2px);background:var(--ink)}
+.action-button b{font-size:15px}
+.text-action{color:var(--ink);font-size:10px;font-weight:650;text-decoration:none;text-underline-offset:4px}
+.text-action:hover{color:var(--accent);text-decoration:underline}
+.caveat{color:#7d7c73!important;font-size:9px!important;line-height:1.7!important}
+.source-photo{position:relative;display:flex;flex-direction:column;min-width:0;margin:0;overflow:hidden;background:#e8e2d5}
+.source-photo>img{display:block;flex:1 1 auto;width:100%;height:auto;min-height:0;object-fit:cover}
+.source-photo figcaption{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 11px;background:#f0ece2;color:#64655e;font-size:8px;line-height:1.45}
+.source-photo figcaption a{color:var(--accent);font-weight:650;text-decoration:none;white-space:nowrap}
+.source-photo figcaption a:hover{text-decoration:underline;text-underline-offset:3px}
+.original-art{background:#d9d4c6}
+.original-art>img{object-fit:cover}
+.concept-directory .directory-hero{min-height:560px;padding-top:58px;padding-bottom:66px;grid-template-columns:1fr .9fr;gap:66px}
+.concept-directory .directory-hero h1{max-width:690px}
+.concept-directory .directory-hero h1 em{font-weight:400;color:#657b4b}
+.directory-feature{position:relative;isolation:isolate;min-height:440px;overflow:hidden;background:#183f4a}
+.directory-feature:after{position:absolute;inset:0;content:"";z-index:0;background:linear-gradient(180deg,rgba(10,26,32,.03) 10%,rgba(10,26,32,.83) 100%)}
+.directory-feature-photo{position:absolute;inset:0}
+.directory-feature-photo>img{height:100%;object-fit:cover}
+.directory-feature-photo figcaption{position:absolute;inset:auto 0 0;opacity:0}
+.directory-feature>div{position:absolute;z-index:1;left:26px;bottom:29px;display:grid;gap:13px;color:#fff}
+.directory-feature>div>span{font:9px Consolas,monospace;letter-spacing:.12em}
+.directory-feature>div>b{font:500 clamp(33px,4vw,46px)/.98 Georgia,serif;letter-spacing:-.05em}
+.directory-feature>div>a{color:#fff;font-size:10px;text-decoration:none}
+.directory-feature>div>a:hover{text-decoration:underline;text-underline-offset:4px}
+.directory-note{max-width:540px}
+.idea-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.idea-card{display:grid;grid-template-columns:minmax(150px,.9fr) 1.1fr;min-height:265px;padding:0}
+.idea-card-image{position:relative;display:block;min-height:265px;overflow:hidden;background:#d9d4c6}
+.idea-card-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.idea-card:hover .idea-card-image img{transform:scale(1.035)}
+.idea-card-image>span{position:absolute;top:12px;left:12px;padding:7px 9px;background:rgba(25,35,28,.8);color:white;font:8px Consolas,monospace;letter-spacing:.07em}
+.idea-card-copy{align-self:center;padding:22px 23px}
+.idea-card-type{margin:0 0 10px!important;color:var(--accent)!important;font:8px Consolas,monospace!important;letter-spacing:.1em;text-transform:uppercase}
+.idea-card h2{margin:0 0 10px!important;font:500 24px/1.05 Georgia,serif!important;letter-spacing:-.04em!important}
+.idea-card-copy>p:not(.idea-card-type){min-height:70px;margin:0 0 17px!important;color:#656961;font-size:10px;line-height:1.7}
+.idea-card-link{display:inline-flex;gap:11px;align-items:center;color:var(--accent);font-size:10px;font-weight:650;text-decoration:none}
+.idea-card-link:hover{text-decoration:underline;text-underline-offset:4px}
+.idea-card-link b{font-size:14px}
+.site-concept .concept-contact{min-height:310px;grid-template-columns:1fr .85fr;gap:75px;align-items:center;padding:75px 0 84px;border-top:1px solid var(--line)}
+.site-concept .concept-contact .overline{margin-bottom:16px}
+.site-concept .concept-contact h2{font-size:clamp(36px,4.2vw,52px)}
+.site-concept .concept-contact>div:last-child>p{max-width:510px;margin:0 0 13px;font-size:11px}
+.site-concept .concept-contact .action-button{margin-top:10px}
+.site-concept .concept-footer{width:min(1260px,calc(100% - 64px))}
+
+/* Al Buco: a family story followed by three real cooking traditions. */
+.buco-hero{position:relative;display:grid;grid-template-columns:.82fr 1.18fr;align-items:center;gap:42px;padding-top:60px;padding-bottom:91px}
+.buco-copy>p:not(.overline){max-width:460px;margin:22px 0;color:#5e625a;font-size:13px}
+.buco-photo-main{height:490px}
+.year-stamp{position:absolute;right:31%;bottom:43px;z-index:2;display:flex;align-items:center;gap:13px;padding:14px 18px;background:#f5f2eb;box-shadow:0 12px 30px #2222}
+.year-stamp b{color:var(--accent);font:500 31px Georgia,serif}
+.year-stamp span{color:#656961;font:8px/1.6 Consolas,monospace;letter-spacing:.08em}
+.buco-story{display:grid;grid-template-columns:150px .85fr 1fr;gap:34px;align-items:center;padding:70px 0 90px;border-top:1px solid var(--line)}
+.story-mark{display:grid;justify-items:center;gap:6px;color:var(--accent);text-align:center}
+.story-mark span{font:500 94px/.8 Georgia,serif}
+.story-mark small{font:8px/1.5 Consolas,monospace;letter-spacing:.15em}
+.story-mark i{margin-top:7px;font-size:17px;font-style:normal}
+.buco-story h2{margin-bottom:14px}
+.buco-story>div:nth-child(2)>p:last-child{max-width:425px;color:#696b63;font-size:11px}
+.buco-photo-story{height:310px}
+.buco-menu{padding:73px 0 88px;background:#263b32;color:#f5f2e9}
+.buco-menu .section-kicker{color:#e7c37b}
+.buco-menu h2{margin-bottom:32px}
+.buco-tracks{display:grid;grid-template-columns:repeat(3,1fr);margin-bottom:34px;border-top:1px solid #ffffff40;border-bottom:1px solid #ffffff40}
+.buco-tracks article{padding:23px 24px 25px 0}
+.buco-tracks article+article{padding-left:24px;border-left:1px solid #ffffff30}
+.buco-tracks span{color:#e7c37b;font:9px Consolas,monospace;letter-spacing:.1em}
+.buco-tracks h3{margin:27px 0 9px;font:500 22px Georgia,serif}
+.buco-tracks p{max-width:280px;margin:0;color:#d3d5ca;font-size:10px}
+.buco-food-photo{height:360px}
+.buco-food-photo figcaption{background:#31473d;color:#ebebe1}
+.buco-visit{display:grid;grid-template-columns:1fr .65fr;gap:45px;padding-top:78px;padding-bottom:84px}
+.buco-visit h2{margin-bottom:17px}
+.buco-visit>div:first-child>p:not(.section-kicker){color:#5d625a;font-size:12px}
+.visit-card{display:grid;align-content:center;gap:12px;padding:27px;background:#ede8db}
+.visit-card>span{color:var(--accent);font:9px Consolas,monospace;letter-spacing:.1em}
+.visit-card>a:not(.action-button){font:500 22px Georgia,serif;text-decoration:none}
+
+/* Mustafà: use the real terrace and existing film as the visual invitation. */
+.mustafa-cover{position:relative;min-height:650px;display:flex;align-items:flex-end;background:#163948;color:#fff}
+.mustafa-cover-photo{position:absolute;inset:0}
+.mustafa-cover-photo>img{position:absolute;inset:0}
+.mustafa-cover-photo:after{position:absolute;inset:0;content:"";background:linear-gradient(90deg,rgba(13,40,50,.86),rgba(13,40,50,.36) 58%,rgba(13,40,50,.07)),linear-gradient(0deg,rgba(13,40,50,.39),transparent 53%)}
+.mustafa-cover-photo figcaption{position:absolute;z-index:2;right:15px;bottom:15px;background:#0d293dbd;color:#fff}
+.mustafa-title{position:relative;z-index:1;width:min(1210px,calc(100% - 80px));margin:0 auto 74px}
+.mustafa-title .overline{color:#e6c17f}
+.mustafa-title .overline>span{background:#e6c17f}
+.mustafa-title h1{max-width:760px;font-size:clamp(67px,9vw,124px)}
+.mustafa-title>p:not(.overline){max-width:550px;color:#f3efe5;font-size:14px}
+.light-action{background:#f2e6cf;color:#1e3941}
+.mustafa-season{margin:20px 0 0;color:#f2d9ac;font:9px Consolas,monospace;letter-spacing:.09em}
+.mustafa-side-note{position:absolute;right:39px;top:52px;color:#fff;font:9px/1.8 Consolas,monospace;letter-spacing:.18em;text-align:right}
+.mustafa-side-note b{color:#f2d9ac}
+.mustafa-promise{display:grid;grid-template-columns:.85fr 1fr;gap:74px;align-items:center;padding-top:92px;padding-bottom:97px}
+.mustafa-promise h2{margin-bottom:19px}
+.mustafa-promise>div>p:not(.section-kicker){max-width:510px;color:#5e6560;font-size:12px}
+.mustafa-promise .caveat{margin-top:25px}
+.mustafa-shore-photo{height:420px}
+.mustafa-film{padding:78px 0 86px;background:#dfe8e2}
+.mustafa-film>.page-width{display:grid;grid-template-columns:.72fr 1.28fr;gap:55px;align-items:center}
+.mustafa-film h2{margin-bottom:16px}
+.mustafa-film p:not(.section-kicker){color:#5e625d;font-size:11px}
+.video-frame{position:relative;aspect-ratio:16/9;background:#152b34}
+.video-frame iframe{display:block;width:100%;height:100%;border:0}
+.video-frame>span{position:absolute;left:0;bottom:0;padding:7px 10px;background:#122c34c9;color:white;font:8px Consolas,monospace}
+.mustafa-occasions{display:grid;grid-template-columns:.78fr 1.1fr .82fr;align-items:start;gap:38px;padding-top:89px;padding-bottom:97px}
+.mustafa-occasions h2{font-size:clamp(34px,3.5vw,48px)}
+.occasion-list{border-top:1px solid var(--line)}
+.occasion-list article{display:grid;grid-template-columns:38px 1fr;gap:13px;padding:19px 0;border-bottom:1px solid var(--line)}
+.occasion-list article>span{color:var(--accent);font:9px Consolas,monospace}
+.occasion-list h3{margin:0 0 5px;font:500 17px Georgia,serif}
+.occasion-list p{margin:0;color:#656a64;font-size:10px}
+.mustafa-evening-photo{height:340px}
+
+/* Starace: visitors choose and book a specific hands-on dairy experience. */
+.starace-hero{position:relative;display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:center;padding-top:75px;padding-bottom:82px}
+.starace-intro>p:not(.overline){max-width:510px;color:#5f655d;font-size:13px}
+.starace-intro>span{display:block;margin-top:20px;color:#74756b;font:8px Consolas,monospace;letter-spacing:.1em}
+.starace-hero-photo{height:480px}
+.starace-roundel{position:absolute;right:43%;bottom:52px;display:grid;place-items:center;width:128px;height:128px;border-radius:50%;background:#dbac5f;color:#303d30;text-align:center;transform:rotate(-12deg)}
+.starace-roundel span{font:10px/1.45 Consolas,monospace;letter-spacing:.1em}
+.starace-roundel b{font:700 14px Georgia,serif}
+.starace-experiences{padding:83px 0 91px;background:#263c30;color:#f6f1e4}
+.starace-experiences .section-kicker{color:#e5bf76}
+.experience-heading{display:grid;grid-template-columns:1fr .6fr;gap:60px;align-items:end;margin-bottom:35px}
+.experience-heading>p{margin:0 0 5px;color:#d0d5c7;font-size:10px}
+.experience-list{border-top:1px solid #ffffff48}
+.experience-list article{display:grid;grid-template-columns:50px 1fr 210px;gap:23px;align-items:center;padding:24px 0;border-bottom:1px solid #ffffff35}
+.experience-number{color:#e5bf76;font:10px Consolas,monospace}
+.experience-list h3{margin:0 0 7px;font:500 24px/1.06 Georgia,serif}
+.experience-list article>div:nth-child(2)>p{max-width:510px;margin:0;color:#d0d5c7;font-size:10px}
+.experience-meta{display:grid;justify-items:start;gap:6px}
+.experience-meta>b{color:#e5bf76;font:8px Consolas,monospace;letter-spacing:.12em}
+.experience-meta>strong{font:500 19px Georgia,serif}
+.experience-meta small{font:9px Arial,sans-serif}
+.experience-meta a{color:#fff;font-size:9px;text-underline-offset:3px}
+.starace-experiences .caveat{color:#c9cabe!important}
+.starace-product{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center;padding-top:96px;padding-bottom:100px}
+.starace-product-copy>p:not(.section-kicker){max-width:515px;color:#62665e;font-size:11px}
+.starace-product-copy h2{margin-bottom:15px}
+.starace-product-copy .text-action{display:inline-flex;margin-top:12px}
+.starace-still{position:relative;min-height:510px}
+.starace-still .source-photo{position:absolute}
+.starace-still-small{top:0;left:0;width:51%;height:300px}
+.starace-still-large{right:0;bottom:0;width:60%;height:390px;border:9px solid var(--paper)}
+.starace-still>span{position:absolute;left:3%;bottom:6px;color:var(--accent);font:9px Consolas,monospace;letter-spacing:.13em}
+.starace-store{padding:65px 0 71px;background:#e9e4d6}
+.starace-store>.page-width{display:grid;grid-template-columns:1fr .72fr;gap:65px;align-items:center}
+.starace-store h2{margin-bottom:16px}
+.starace-store .page-width>div:first-child>p:not(.section-kicker){color:#63655e;font-size:11px}
+.store-aside{padding:25px;background:#f6f2e8}
+.store-aside>span{color:var(--accent);font:8px Consolas,monospace;letter-spacing:.1em}
+.store-aside p{font-size:10px;color:#66685f}
+
+/* Cerasè: seafood, a real panorama film, the Pizza di Vico and the apartment. */
+.cerase-hero{position:relative;min-height:605px;display:grid;grid-template-columns:.82fr 1.18fr;gap:42px;align-items:center;padding:53px max(40px,calc((100vw - 1210px)/2)) 70px;background:#f5ede3}
+.cerase-hero-copy>p:not(.overline){max-width:485px;color:#5f625d;font-size:12px}
+.cerase-hero-photo{height:470px}
+.cerase-seal{position:absolute;right:47%;bottom:37px;display:grid;gap:3px;padding:13px 16px;background:#f7f1e6;color:#b55f4e;font:8px Consolas,monospace;letter-spacing:.1em;box-shadow:0 8px 18px #322c2430}
+.cerase-seal b{font-size:15px}
+.cerase-seal i{font-style:normal}
+.cerase-film{padding:82px 0 88px;background:#244d54;color:#f4eee1}
+.cerase-film .section-kicker{color:#e6b88a}
+.cerase-film>.page-width{display:grid;grid-template-columns:.72fr 1.28fr;gap:62px;align-items:center}
+.cerase-film h2{margin-bottom:14px}
+.cerase-film-copy>p:not(.section-kicker){color:#d8e0d8;font-size:11px}
+.cerase-film-copy>.text-action{display:inline-flex;margin-top:11px;color:#f2dfc3}
+.cerase-video{margin:0}
+.cerase-video video{display:block;width:100%;max-height:445px;aspect-ratio:16/9;background:#142e35;object-fit:cover}
+.cerase-video figcaption{margin-top:9px;color:#c9d1c9;font:8px Consolas,monospace}
+.cerase-menu{display:grid;grid-template-columns:.68fr 1fr .75fr;gap:36px;align-items:start;padding-top:86px;padding-bottom:96px}
+.cerase-menu-heading>p:last-child{color:#686962;font-size:10px}
+.dish-stack{border-top:1px solid var(--line)}
+.dish-stack article{padding:16px 0;border-bottom:1px solid var(--line)}
+.dish-stack article>span,.cerase-path>div>span{color:var(--accent);font:8px Consolas,monospace;letter-spacing:.11em}
+.dish-stack h3{margin:7px 0 3px;font:500 19px Georgia,serif}
+.dish-stack p{margin:0;color:#686a62;font-size:9px}
+.dish-stack .action-button{margin-top:17px}
+.cerase-chef-photo{height:338px}
+.cerase-paths{padding:82px 0 91px;background:#ece2d7}
+.cerase-paths h2{margin-bottom:36px}
+.cerase-path-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.cerase-path{background:#f7f1e7}
+.cerase-path .source-photo{height:280px}
+.cerase-path>div:not(.source-photo){padding:23px 25px 28px}
+.cerase-path h3{margin:9px 0 7px;font:500 25px Georgia,serif}
+.cerase-path p{max-width:450px;color:#686a61;font-size:10px}
+.cerase-path a{color:var(--accent);font-size:10px;font-weight:650;text-decoration:none}
+.apartment-path{display:grid;grid-template-columns:.78fr 1fr}
+.apartment-path .apartment-art{min-height:340px;display:flex;flex-direction:column;justify-content:center;gap:7px;padding:24px;background:linear-gradient(150deg,#3b5860,#d28b71);color:#f8efde}
+.apartment-art span{font:9px Consolas,monospace;letter-spacing:.22em}
+.apartment-art b{font:500 29px Georgia,serif}
+.apartment-art i{font:8px Consolas,monospace;letter-spacing:.1em}
+
+/* Stella: an original architectural illustration and an at-a-glance travel map. */
+.stella-hero{display:grid;grid-template-columns:.82fr 1.18fr;gap:50px;align-items:center;padding-top:65px;padding-bottom:83px}
+.stella-hero>div>p:not(.overline){max-width:465px;color:#60635d;font-size:12px}
+.stella-illustration{height:462px}
+.stella-details{padding:65px 0 76px;background:#373e76;color:#f7f1e4}
+.stella-numbers{display:grid;grid-template-columns:repeat(3,1fr);padding-bottom:40px;border-bottom:1px solid #ffffff48}
+.stella-numbers article{display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:center}
+.stella-numbers article+article{padding-left:23px;border-left:1px solid #ffffff36}
+.stella-numbers b{font:500 48px Georgia,serif;color:#efc779}
+.stella-numbers sup{font-size:18px}
+.stella-numbers span{font:8px/1.6 Consolas,monospace;letter-spacing:.08em}
+.stella-story{display:grid;grid-template-columns:1fr .75fr;gap:75px;padding-top:43px}
+.stella-story .section-kicker{color:#efc779}
+.stella-story>p{margin:4px 0 0;color:#dddccf;font-size:10px}
+.stella-map{display:grid;grid-template-columns:.7fr 1.3fr;gap:45px;align-items:center;padding-top:93px;padding-bottom:100px}
+.stella-map-copy>p:not(.section-kicker){color:#65665f;font-size:11px}
+.destination-map{position:relative;min-height:385px;overflow:hidden;background:#e8e3d9;border:1px solid #d8d1c1}
+.destination-map:before{position:absolute;inset:0;content:"";opacity:.32;background-image:linear-gradient(35deg,transparent 49.5%,#aaa995 49.7%,#aaa995 50%,transparent 50.2%),linear-gradient(144deg,transparent 49.5%,#aaa995 49.7%,#aaa995 50%,transparent 50.2%);background-size:140px 115px}
+.map-line{position:absolute;left:20%;top:53%;width:58%;height:1px;border-top:2px dashed var(--accent);transform:rotate(-16deg)}
+.map-stop{position:absolute;z-index:1;display:grid;gap:4px;color:#30352f;font:9px Consolas,monospace;letter-spacing:.07em}
+.map-stop:before{content:"";width:9px;height:9px;border:2px solid var(--accent);border-radius:50%;background:#f5f2eb}
+.map-stop small{font-size:7px;color:#76776e}
+.stop-origin{left:10%;top:47%;padding:10px;background:#f5f2eb;box-shadow:0 8px 16px #2222}
+.stop-origin:before{background:#dba956}
+.stop-sorrento{left:43%;top:29%}.stop-capri{left:70%;top:20%}.stop-pompei{left:53%;top:67%}.stop-napoli{left:78%;top:55%}
+.map-caption{position:absolute;right:12px;bottom:11px;color:#85847a;font:7px Consolas,monospace;letter-spacing:.08em}
+
+/* Frate Cosimo: the concept begins with a distinctive dish from its live menu. */
+.frate-hero{display:grid;grid-template-columns:.86fr 1.14fr;gap:54px;align-items:center;padding-top:65px;padding-bottom:85px}
+.frate-hero>div:first-child>p:not(.overline){max-width:510px;color:#60645b;font-size:12px}
+.frate-hero blockquote{max-width:480px;margin:23px 0;padding-left:17px;border-left:2px solid var(--accent);color:#47483b;font:italic 20px/1.35 Georgia,serif}
+.frate-dish-art{height:460px}
+.frate-dish-art figcaption{background:#e4dfd0}
+.frate-signature{padding:76px 0 84px;background:#393e32;color:#f6f0df}
+.frate-signature .section-kicker{color:#e4bd76}
+.frate-signature>.page-width{display:grid;grid-template-columns:.92fr 1.08fr;gap:70px;align-items:center}
+.frate-signature h2{margin-bottom:16px}
+.frate-signature>div>div:first-child>p:not(.section-kicker){max-width:520px;color:#d9d9cb;font-size:11px}
+.frate-signature .caveat{color:#c8cabc!important}
+.dish-notes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #ffffff47;border-bottom:1px solid #ffffff47}
+.dish-notes article{padding:20px 14px 22px 0}
+.dish-notes article+article{padding-left:14px;border-left:1px solid #ffffff34}
+.dish-notes b{display:block;margin-bottom:29px;color:#e4bd76;font:9px Consolas,monospace}
+.dish-notes span{font:8px/1.7 Consolas,monospace;letter-spacing:.07em}
+.frate-menu{display:grid;grid-template-columns:.77fr 1.23fr;gap:76px;padding-top:89px;padding-bottom:100px}
+.frate-menu>div:first-child>p:not(.section-kicker){color:#686b63;font-size:10px}
+.frate-menu>div:first-child .text-action{display:inline-block;margin-top:12px}
+.frate-dish-list{border-top:1px solid var(--line)}
+.frate-dish-list article{padding:18px 0;border-bottom:1px solid var(--line)}
+.frate-dish-list span{color:var(--accent);font:8px Consolas,monospace;letter-spacing:.13em}
+.frate-dish-list h3{margin:7px 0 4px;font:500 20px Georgia,serif}
+.frate-dish-list p{margin:0;color:#686b63;font-size:10px}
+.frate-arrive{padding:61px 0;background:#e8e2d3}
+.frate-arrive>.page-width{display:grid;grid-template-columns:1fr .7fr;gap:55px;align-items:center}
+.frate-arrive h2{margin-bottom:12px}
+.frate-arrive>div>div:first-child>p:not(.section-kicker){color:#65665e;font-size:11px}
+.frate-contact{display:grid;gap:12px}
+.frate-contact a:not(:last-child){font:500 17px Georgia,serif;text-decoration:none}
+.frate-contact a:last-child{color:var(--accent);font-size:10px}
+
+/* Parlato: turn its documented family timeline into the page's main navigation. */
+.parlato-hero{display:grid;grid-template-columns:.83fr 1.17fr;gap:53px;align-items:center;padding-top:63px;padding-bottom:81px}
+.parlato-hero>div>p:not(.overline){max-width:495px;color:#5d615a;font-size:12px}
+.parlato-cheese-art{height:470px}
+.parlato-timeline{padding:79px 0 88px;background:#4c302b;color:#f6efe2}
+.parlato-timeline .section-kicker{color:#ebc27e}
+.parlato-timeline>.page-width{display:grid;grid-template-columns:.68fr 1.32fr;gap:75px;align-items:center}
+.timeline-intro>p:last-child{color:#d6cfc0;font-size:10px}
+.timeline{position:relative;border-top:1px solid #ffffff44}
+.timeline:before{position:absolute;left:54px;top:28px;bottom:28px;width:1px;content:"";background:#d2a55e}
+.timeline article{position:relative;display:grid;grid-template-columns:84px 1fr;gap:16px;align-items:center;min-height:91px;border-bottom:1px solid #ffffff35}
+.timeline article:before{position:absolute;left:48px;width:13px;height:13px;content:"";border-radius:50%;background:#e4ba73;box-shadow:0 0 0 5px #4c302b}
+.timeline article>b{font:500 23px Georgia,serif;color:#f0c87d}
+.timeline article>span{color:#e2dbce;font-size:10px;line-height:1.7}
+.parlato-product{display:grid;grid-template-columns:.83fr 1.17fr;gap:72px;padding-top:94px;padding-bottom:100px}
+.parlato-product-note>p:not(.section-kicker){color:#686a62;font-size:11px}
+.parlato-product-note .text-action{display:inline-flex;margin-top:15px}
+.parlato-facts{border-top:1px solid var(--line)}
+.parlato-facts article{padding:19px 0;border-bottom:1px solid var(--line)}
+.parlato-facts article>span{display:block;margin-bottom:7px;color:var(--accent);font:8px Consolas,monospace;letter-spacing:.11em}
+.parlato-facts article>b{font:500 21px Georgia,serif}
+.parlato-facts article>p{margin:6px 0 0;color:#686a62;font-size:9px}
+.parlato-visit{padding:57px 0;background:#eee4d5}
+.parlato-visit>.page-width{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.parlato-visit h2{margin-bottom:8px}
+.parlato-visit .page-width>div:last-child{display:grid;justify-items:start;gap:10px}
+.parlato-visit .page-width>div:last-child>a:not(.action-button){font:500 16px Georgia,serif;text-decoration:none}
+
+/* Carbone: a visible supply-chain sequence leads into real product photography. */
+.carbone-hero{position:relative;display:grid;grid-template-columns:.78fr 1.22fr;gap:49px;align-items:center;padding-top:66px;padding-bottom:105px}
+.carbone-head>p:not(.overline){max-width:480px;color:#60625c;font-size:12px}
+.carbone-hero-photo{height:488px}
+.carbone-origin{position:absolute;right:14%;bottom:39px;display:grid;gap:6px;min-width:204px;padding:16px 20px;background:#efe8db;box-shadow:0 11px 28px #2923242c}
+.carbone-origin>span,.carbone-origin>i{font:8px Consolas,monospace;letter-spacing:.1em;color:#6f615c}
+.carbone-origin>b{color:var(--accent);font:500 23px/1.02 Georgia,serif}
+.carbone-origin>i{font-size:7px;font-style:normal}
+.carbone-chain{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:center;padding:71px 0 82px;border-top:1px solid var(--line)}
+.carbone-chain>div:first-child>p:not(.section-kicker){color:#676961;font-size:10px}
+.chain-flow{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:28px 18px;background:#eee8de}
+.chain-flow article{display:grid;gap:14px}
+.chain-flow article>span{color:var(--accent);font:8px Consolas,monospace}
+.chain-flow article>b{font:500 16px/1.1 Georgia,serif}
+.chain-flow>i{color:var(--accent);font-size:18px;font-style:normal}
+.carbone-products{padding:83px 0 90px;background:#402d37;color:#f4ecdf}
+.carbone-products .section-kicker{color:#e3b77b}
+.product-heading{display:grid;grid-template-columns:1fr .55fr;gap:50px;align-items:end;margin-bottom:34px}
+.product-heading>p{margin:0;color:#d1cbd0;font-size:10px}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.product-grid article{padding:12px 12px 20px;background:#f5eee2;color:#282924}
+.product-photo{height:245px}
+.product-grid article>span{display:block;margin:17px 6px 6px;color:var(--accent);font:8px Consolas,monospace;letter-spacing:.12em}
+.product-grid h3{margin:0 6px;font:500 21px Georgia,serif}
+.product-grid article>p{margin:9px 6px 0;color:#666960;font-size:9px}
+.carbone-stores{display:grid;grid-template-columns:.9fr .8fr;gap:70px;align-items:center;padding-top:86px;padding-bottom:96px}
+.carbone-stores>div:first-child>p:not(.section-kicker){max-width:500px;color:#676961;font-size:10px}
+.carbone-stores .action-button{margin-top:12px}
+.store-stamp{min-height:220px;display:grid;align-content:center;justify-items:center;gap:22px;border:1px solid var(--accent);outline:1px solid var(--accent);outline-offset:8px;color:var(--accent);text-align:center}
+.store-stamp span{font:11px/1.55 Consolas,monospace;letter-spacing:.12em}
+.store-stamp b{font:500 32px Georgia,serif;letter-spacing:-.05em}
+.store-stamp i{font:8px Consolas,monospace;letter-spacing:.16em;font-style:normal}
+
+/* Casale del Golfo: keep apartments, food and events as separate visitor paths. */
+.casale-hero{position:relative;min-height:690px;display:flex;align-items:flex-end;color:#fff;background:#334337}
+.casale-hero-image{position:absolute;inset:0}
+.casale-hero-image>.source-photo{position:absolute;inset:0;height:100%}
+.casale-hero-image>.source-photo>img{position:absolute;inset:0;height:100%}
+.casale-hero-image:after{position:absolute;inset:0;content:"";background:linear-gradient(0deg,rgba(23,36,27,.91),transparent 69%),linear-gradient(90deg,rgba(23,36,27,.32),transparent 66%)}
+.casale-hero-image figcaption{position:absolute;z-index:2;right:14px;bottom:15px;background:#203326c9;color:#fff}
+.casale-hero-image>span{position:absolute;z-index:1;top:34px;left:40px;color:#f8efdb;font:8px Consolas,monospace;letter-spacing:.13em}
+.casale-title{position:relative;z-index:1;padding-bottom:64px}
+.casale-title .overline{color:#e9c98f}
+.casale-title .overline>span{background:#e9c98f}
+.casale-title h1{max-width:750px;font-size:clamp(65px,8vw,105px)}
+.casale-title>p:not(.overline){max-width:700px;color:#eee8d9;font-size:12px}
+.casale-count{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding-top:35px;padding-bottom:36px;border-bottom:1px solid var(--line)}
+.casale-count>div{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:11px}
+.casale-count b{font:500 33px Georgia,serif;color:var(--accent)}
+.casale-count span{color:#6d6c63;font:7px/1.5 Consolas,monospace;letter-spacing:.06em}
+.casale-experience{display:grid;grid-template-columns:.96fr 1.04fr;gap:68px;align-items:center;padding-top:88px;padding-bottom:99px}
+.casale-garden{position:relative;height:470px}
+.casale-garden .source-photo{height:100%}
+.casale-garden>span{position:absolute;right:0;bottom:0;padding:9px 12px;background:#1f2d26da;color:white;font:7px Consolas,monospace;letter-spacing:.08em}
+.casale-experience-copy h2{margin-bottom:22px}
+.casale-experience-copy>article{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.casale-experience-copy>article>span{color:var(--accent);font:9px Consolas,monospace}
+.casale-experience-copy>article b{font:500 17px Georgia,serif}
+.casale-experience-copy>article p{margin:4px 0 0;color:#666960;font-size:9px}
+.casale-founder{padding:75px 0 82px;background:#e9e6d8}
+.casale-founder h2{margin-bottom:14px}
+.casale-founder>.page-width>p:not(.section-kicker){max-width:650px;color:#64675f;font-size:10px}
+.casale-contact-line{display:flex;flex-wrap:wrap;gap:26px;margin-top:24px}
+.casale-contact-line a{color:var(--accent);font-size:10px;font-weight:650;text-decoration:none}
+
+/* Sant'Angelo: the mountain panorama, fire-cooked meat and current menu. */
+.santangelo-hero{display:grid;grid-template-columns:.79fr 1.21fr;gap:47px;align-items:center;padding-top:63px;padding-bottom:82px}
+.santangelo-title>p:not(.overline){max-width:490px;color:#5d635c;font-size:12px}
+.santangelo-landscape{height:470px}
+.santangelo-view{padding:62px 0 70px;background:#29443a;color:#f5f0e6}
+.santangelo-view .section-kicker{color:#ddba83}
+.santangelo-view h2{max-width:780px}
+.santangelo-view>.page-width>p:last-child{max-width:720px;color:#d7dbcf;font-size:10px}
+.santangelo-menu{display:grid;grid-template-columns:.75fr 1.25fr;gap:72px;padding-top:89px;padding-bottom:97px}
+.santangelo-menu-title>p:last-child{color:#656960;font-size:10px}
+.santangelo-dishes{border-top:1px solid var(--line)}
+.santangelo-dishes article{padding:17px 0;border-bottom:1px solid var(--line)}
+.santangelo-dishes article>span{display:block;margin-bottom:12px;color:var(--accent);font:8px Consolas,monospace;letter-spacing:.13em}
+.santangelo-dishes article>div{display:flex;justify-content:space-between;gap:25px;padding:6px 0}
+.santangelo-dishes article>div>b{font:500 15px Georgia,serif}
+.santangelo-dishes article>div>small{color:var(--accent);font:10px Consolas,monospace}
+.santangelo-dishes .text-action{display:inline-flex;margin-top:15px}
+.grill-card{padding-inline:17px!important;background:#ece6d9}
+.santangelo-visit{padding:61px 0;background:#eee7d9}
+.santangelo-visit>.page-width{display:grid;grid-template-columns:1fr .6fr;gap:60px;align-items:center}
+.santangelo-visit h2{margin-bottom:12px}
+.santangelo-visit>div:first-child>p:not(.section-kicker){color:#62675f;font-size:10px}
+.visit-actions{display:grid;justify-items:start;gap:12px}
+.visit-actions>a:not(.action-button){font:500 19px Georgia,serif;text-decoration:none}
+
+@media(max-width:920px){
+ .concept-directory .directory-hero{gap:30px}
+ .idea-card{grid-template-columns:.8fr 1.2fr}
+ .buco-story{grid-template-columns:95px .9fr 1.1fr;gap:22px}
+ .mustafa-occasions{grid-template-columns:.8fr 1.1fr}
+ .mustafa-evening-photo{grid-column:1/-1;height:300px}
+ .cerase-menu{grid-template-columns:.7fr 1fr}
+ .cerase-chef-photo{grid-column:2;height:260px}
+ .casale-count{grid-template-columns:repeat(2,1fr)}
+ .product-photo{height:190px}
+ .carbone-chain{grid-template-columns:.7fr 1.3fr;gap:25px}
+}
+@media(max-width:680px){
+ .page-width{width:calc(100% - 40px)}
+ .site-concept h1{font-size:clamp(48px,13vw,70px)}
+ .site-concept h2{font-size:40px}
+ .site-concept .concept-contact{display:block;width:calc(100% - 40px);padding:59px 0 67px}
+ .site-concept .concept-contact>div:last-child{margin-top:17px}
+ .site-concept .concept-contact>div:last-child>p{font-size:10px}
+ .source-photo figcaption{align-items:flex-start;font-size:7px}
+ .source-photo figcaption a{font-size:7px}
+ .concept-directory .directory-hero{display:block;width:calc(100% - 40px);padding:51px 0 55px}
+ .concept-directory .directory-hero h1{font-size:clamp(49px,13vw,68px)}
+ .directory-feature{min-height:335px;margin-top:30px}
+ .directory-feature>div{left:19px;bottom:21px}
+ .idea-grid{grid-template-columns:1fr}
+ .idea-card{grid-template-columns:.75fr 1.25fr;min-height:225px}
+ .idea-card-image{min-height:225px}
+ .idea-card-copy{padding:16px}
+ .idea-card h2{font-size:20px!important}
+ .idea-card-copy>p:not(.idea-card-type){min-height:0;font-size:9px}
+ .idea-card-type{font-size:7px!important}
+ .buco-hero,.starace-hero,.cerase-hero,.stella-hero,.frate-hero,.parlato-hero,.carbone-hero,.santangelo-hero{display:flex;flex-direction:column;align-items:stretch;gap:27px;padding-top:49px;padding-bottom:58px}
+ .buco-copy>p:not(.overline),.starace-intro>p:not(.overline),.frate-hero>div:first-child>p:not(.overline){font-size:11px}
+ .buco-photo-main,.starace-hero-photo,.cerase-hero-photo,.stella-illustration,.frate-dish-art,.parlato-cheese-art,.carbone-hero-photo,.santangelo-landscape{height:330px;min-height:0}
+ .year-stamp{right:12%;bottom:35px}
+ .buco-story{grid-template-columns:66px 1fr;gap:18px;padding:54px 0}
+ .story-mark span{font-size:67px}
+ .buco-photo-story{grid-column:1/-1;height:245px}
+ .buco-tracks{grid-template-columns:1fr}
+ .buco-tracks article,.buco-tracks article+article{padding:17px 0;border-left:0}
+ .buco-tracks article+article{border-top:1px solid #ffffff30}
+ .buco-tracks h3{margin:14px 0 6px}
+ .buco-food-photo{height:240px}
+ .buco-visit,.mustafa-promise,.mustafa-film>.page-width,.starace-product,.starace-store>.page-width,.cerase-film>.page-width,.cerase-menu,.stella-map,.stella-story,.frate-signature>.page-width,.frate-menu,.frate-arrive>.page-width,.parlato-timeline>.page-width,.parlato-product,.carbone-chain,.carbone-stores,.casale-experience,.santangelo-menu,.santangelo-visit>.page-width{grid-template-columns:1fr;gap:24px}
+ .buco-visit{padding-top:55px;padding-bottom:61px}
+ .mustafa-cover{min-height:610px}
+ .mustafa-title{width:calc(100% - 40px);margin-bottom:51px}
+ .mustafa-title h1{font-size:clamp(57px,15vw,82px)}
+ .mustafa-title>p:not(.overline){font-size:12px}
+ .mustafa-side-note{top:19px;right:18px;font-size:7px}
+ .mustafa-promise{padding-top:59px;padding-bottom:64px}
+ .mustafa-shore-photo{height:280px}
+ .mustafa-film{padding:58px 0}
+ .mustafa-occasions{grid-template-columns:1fr;padding-top:60px;padding-bottom:68px}
+ .mustafa-evening-photo{grid-column:auto;height:245px}
+ .experience-heading{grid-template-columns:1fr;gap:14px}
+ .experience-list article{grid-template-columns:28px 1fr;gap:12px}
+ .experience-meta{grid-column:2;grid-template-columns:auto 1fr;align-items:center;column-gap:15px;margin-top:7px}
+ .experience-meta>b{grid-column:1}
+ .experience-meta>strong{grid-column:2;grid-row:1}
+ .experience-meta a{grid-column:1/-1}
+ .starace-roundel{right:9%;bottom:36px;width:97px;height:97px}
+ .starace-roundel span{font-size:8px}
+ .starace-experiences{padding:60px 0}
+ .experience-list h3{font-size:20px}
+ .starace-product{padding-top:62px;padding-bottom:68px}
+ .starace-still{min-height:380px}
+ .starace-still-small{height:220px}
+ .starace-still-large{height:290px}
+ .starace-store{padding:52px 0}
+ .cerase-hero{padding:47px 20px 59px}
+ .cerase-hero-photo{height:320px}
+ .cerase-seal{right:9%;bottom:35px}
+ .cerase-film{padding:59px 0}
+ .cerase-video video{min-height:225px}
+ .cerase-menu{padding-top:60px;padding-bottom:65px}
+ .cerase-chef-photo{grid-column:auto;height:260px}
+ .cerase-paths{padding:59px 0 67px}
+ .cerase-path-grid{grid-template-columns:1fr}
+ .cerase-path .source-photo{height:220px}
+ .apartment-path{grid-template-columns:.72fr 1fr}
+ .apartment-path .apartment-art{min-height:280px;padding:15px}
+ .apartment-art b{font-size:23px}
+ .stella-hero{padding-top:50px;padding-bottom:57px}
+ .stella-details{padding:50px 0 58px}
+ .stella-numbers{grid-template-columns:1fr;gap:12px;padding-bottom:26px}
+ .stella-numbers article{grid-template-columns:85px 1fr}
+ .stella-numbers article+article{padding:12px 0 0;border-left:0;border-top:1px solid #ffffff35}
+ .stella-numbers b{font-size:39px}
+ .stella-map{padding-top:61px;padding-bottom:69px}
+ .destination-map{min-height:330px}
+ .frate-hero{padding-top:49px;padding-bottom:59px}
+ .frate-signature{padding:58px 0 64px}
+ .dish-notes article{padding-right:8px}
+ .dish-notes article+article{padding-left:8px}
+ .dish-notes span{font-size:7px}
+ .frate-menu{padding-top:61px;padding-bottom:69px}
+ .frate-arrive{padding:50px 0}
+ .parlato-hero{padding-top:49px;padding-bottom:59px}
+ .parlato-timeline{padding:59px 0 67px}
+ .timeline article{grid-template-columns:65px 1fr}
+ .timeline:before{left:40px}
+ .timeline article:before{left:34px}
+ .parlato-product{padding-top:63px;padding-bottom:67px}
+ .parlato-visit>.page-width{display:grid;grid-template-columns:1fr;gap:20px}
+ .parlato-visit{padding:50px 0}
+ .carbone-hero{padding-top:49px;padding-bottom:79px}
+ .carbone-origin{right:8%;bottom:30px;min-width:165px;padding:12px 14px}
+ .carbone-chain{padding-top:55px;padding-bottom:61px}
+ .chain-flow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+ .chain-flow>i{display:none}
+ .carbone-products{padding:60px 0 68px}
+ .product-heading{grid-template-columns:1fr;gap:12px}
+ .product-grid{grid-template-columns:1fr}
+ .product-photo{height:245px}
+ .carbone-stores{padding-top:62px;padding-bottom:69px}
+ .store-stamp{min-height:180px}
+ .casale-hero{min-height:620px}
+ .casale-hero-image>span{left:18px;top:18px;max-width:74%;font-size:7px;line-height:1.5}
+ .casale-title{padding-bottom:50px}
+ .casale-title h1{font-size:clamp(59px,14vw,82px)}
+ .casale-title>p:not(.overline){font-size:10px}
+ .casale-count{grid-template-columns:1fr 1fr;padding-top:22px;padding-bottom:24px}
+ .casale-count>div{grid-template-columns:1fr;gap:5px}
+ .casale-count b{font-size:29px}
+ .casale-count span{font-size:6px}
+ .casale-experience{padding-top:60px;padding-bottom:68px}
+ .casale-garden{height:310px}
+ .casale-founder{padding:58px 0 65px}
+ .santangelo-hero{padding-top:49px;padding-bottom:58px}
+ .santangelo-view{padding:53px 0 60px}
+ .santangelo-menu{padding-top:61px;padding-bottom:69px}
+ .santangelo-visit{padding:50px 0}
+}
+@media(max-width:390px){
+ .idea-card{grid-template-columns:.68fr 1.32fr}
+ .idea-card-copy{padding:13px}
+ .idea-card h2{font-size:18px!important}
+ .apartment-path{grid-template-columns:1fr}
+ .apartment-path .apartment-art{min-height:145px}
+ .mustafa-cover{min-height:570px}
+ .year-stamp{right:7%;padding:11px 13px}
+}
+@media(prefers-reduced-motion:reduce){.action-button,.idea-card-image img{transition:none}}

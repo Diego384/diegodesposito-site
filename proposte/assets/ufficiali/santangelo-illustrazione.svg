@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 820" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrazione del Ristorante Sant’Angelo sul Monte Faito</title>
+  <desc id="desc">Una terrazza di montagna con vista sul Golfo, sagoma del Vesuvio e una griglia a brace in primo piano.</desc>
+  <defs>
+    <linearGradient id="dusk" x2="0" y2="1"><stop stop-color="#536c69"/><stop offset=".58" stop-color="#a88e70"/><stop offset="1" stop-color="#d2a26d"/></linearGradient>
+    <linearGradient id="water" x2="0" y2="1"><stop stop-color="#5f9b9e"/><stop offset="1" stop-color="#315a5d"/></linearGradient>
+    <linearGradient id="flame" x2="0" y2="1"><stop stop-color="#f8d992"/><stop offset=".48" stop-color="#f08a42"/><stop offset="1" stop-color="#b83e25"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="25"/></filter>
+  </defs>
+  <rect width="1100" height="820" fill="url(#dusk)"/>
+  <circle cx="809" cy="180" r="90" fill="#f4d39b"/>
+  <path d="M0 499c172-102 242-35 350-82 98-43 168-113 270-61 78 40 137 30 215-32 95-75 167-72 265-19v515H0z" fill="#566450"/>
+  <path d="M0 547c125-39 207-16 325 23 151 50 238 24 367-45 118-63 247-80 408-39v334H0z" fill="#374d42"/>
+  <path d="M343 463c112 22 199 40 318 11 109-26 247-60 439-33v286H343z" fill="url(#water)"/>
+  <path d="M0 667c161-52 295-57 416-17 93 30 172 52 283 30 121-25 212-66 401-41" fill="none" stroke="#dce0c8" stroke-opacity=".45" stroke-width="4"/>
+  <path d="M446 475c65-15 112-14 173-29 70-18 119-15 174 3 51 17 106 19 163 14" fill="none" stroke="#eed1a2" stroke-width="5" opacity=".75"/>
+  <text x="68" y="86" fill="#f5eddc" font-family="Arial,sans-serif" font-size="19" letter-spacing="5">MONTE FAITO · GOLFO DI NAPOLI</text>
+  <path d="M710 370c34-48 66-54 95-37 21-31 47-34 73-8 18-22 50-18 67 2 27-9 49 5 61 32" fill="none" stroke="#ece2cd" stroke-width="5" opacity=".9"/>
+  <text x="713" y="408" fill="#f8efdc" font-family="Arial,sans-serif" font-size="16" letter-spacing="4">SORRENTO · CAPRI</text>
+  <path d="M105 573h335v15H105zM123 588v61m300-61v61M181 588v61m202-61v61" stroke="#ddbb86" stroke-width="9"/>
+  <path d="M65 695h342v-18H65z" fill="#533f31"/>
+  <g><ellipse cx="246" cy="706" rx="203" ry="36" fill="#f4793c" opacity=".55" filter="url(#glow)"/>
+    <path d="M145 664c-14-41 20-48 31-81 26 31 34 51 21 81 25-32 43-42 39-87 38 39 55 65 30 92 29-21 37-41 36-73 32 27 51 52 32 81H149z" fill="url(#flame)"/>
+    <path d="M95 653h301" stroke="#323932" stroke-width="12" stroke-linecap="round"/>
+    <path d="M113 633h265M127 611h236M145 588h198" stroke="#242c27" stroke-width="7" stroke-linecap="round"/>
+    <path d="M136 653v43m220-43v43" stroke="#323932" stroke-width="9"/>
+  </g>
+  <rect x="470" y="592" width="555" height="151" fill="#263a33" fill-opacity=".78"/>
+  <text x="506" y="635" fill="#f5debc" font-family="Arial,sans-serif" font-size="17" letter-spacing="4">CUCINA ALLA BRACE</text>
+  <text x="506" y="691" fill="#fff3df" font-family="Georgia,serif" font-size="34">Il calore della famiglia Somma</text>
+  <text x="506" y="721" fill="#dfc6a2" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">VILLAGGIO MONTE FAITO · VICO EQUENSE</text>
+</svg>

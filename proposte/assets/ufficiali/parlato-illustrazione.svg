@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 820" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrazione del Provolone del Monaco del Caseificio Luigi Parlato</title>
+  <desc id="desc">Un formaggio a pera legato con corde di rafia davanti alle colline di Arola e Vico Equense.</desc>
+  <defs>
+    <linearGradient id="sunset" x2="0" y2="1"><stop stop-color="#e0a870"/><stop offset="1" stop-color="#f2d5a5"/></linearGradient>
+    <linearGradient id="cheese" x2=".8" y2="1"><stop stop-color="#f5d889"/><stop offset=".68" stop-color="#c78c4e"/><stop offset="1" stop-color="#9a6038"/></linearGradient>
+    <linearGradient id="ridge" x2="0" y2="1"><stop stop-color="#6d7050"/><stop offset="1" stop-color="#343d34"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1100" height="820" fill="url(#sunset)"/>
+  <circle cx="846" cy="182" r="93" fill="#f9e7bf"/>
+  <path d="M0 421 153 293l112 99 141-192 179 207 124-117 180 145 109-86 102 90v381H0z" fill="#747e5c"/>
+  <path d="m0 493 181-146 126 109 124-81 142 98 142-144 141 166 133-104 111 76v353H0z" fill="url(#ridge)"/>
+  <path d="M0 551c146-41 203-42 354 1s222 51 356-1 222-57 390-6v275H0z" fill="#324139"/>
+  <path d="M0 635c139-32 221-14 322 15s188 51 313 12 247-50 465-10v168H0z" fill="#273b31"/>
+  <path d="M0 706h1100v114H0z" fill="#594638"/>
+  <path d="M0 731h1100m-1040 34h980" stroke="#bb976b" stroke-opacity=".42" stroke-width="5"/>
+  <ellipse cx="547" cy="690" rx="233" ry="40" fill="#1d251f" opacity=".42" filter="url(#soft)"/>
+  <path d="M512 284c-44 36-50 77-63 138-26 123-98 204-96 251 2 58 73 94 194 94 127 0 200-38 201-96 0-45-71-132-97-248-15-64-17-103-61-139-21-17-56-19-78 0z" fill="url(#cheese)" stroke="#f4d996" stroke-width="9"/>
+  <path d="M485 282c12-53 36-83 69-83 38 0 58 27 70 83l-19 36H504z" fill="#eacb83" stroke="#ad7547" stroke-width="7"/>
+  <path d="M529 206c1-35 14-61 34-61s34 25 35 61c-12 20-55 20-69 0z" fill="#d4a252" stroke="#9d6939" stroke-width="6"/>
+  <path d="M432 299c19 67 69 114 120 140m123-140c-19 67-70 114-121 140" fill="none" stroke="#875d3d" stroke-width="9"/>
+  <path d="M456 316c30 68 61 85 96 103m105-103c-31 68-62 85-96 103" fill="none" stroke="#f2dc9e" stroke-width="5"/>
+  <path d="M473 359c35 26 49 51 50 86m104-86c-36 26-50 51-51 86" fill="none" stroke="#9e7048" stroke-width="3" opacity=".72"/>
+  <circle cx="456" cy="494" r="4" fill="#f6de9d"/><circle cx="646" cy="457" r="5" fill="#f6de9d"/><circle cx="505" cy="601" r="4" fill="#f6de9d"/><circle cx="658" cy="577" r="4" fill="#f6de9d"/>
+  <text x="64" y="91" fill="#4c4036" font-family="Arial,sans-serif" font-size="19" letter-spacing="5">AROLA · PENISOLA SORRENTINA</text>
+  <rect x="778" y="600" width="265" height="114" rx="5" fill="#f6e8ca" fill-opacity=".94"/>
+  <text x="802" y="640" fill="#714c38" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">FORMAGGIO TIPICO</text>
+  <text x="802" y="680" fill="#3e3d33" font-family="Georgia,serif" font-size="28">Provolone del Monaco</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 820" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrazione di una dimora storica e dei collegamenti del B&amp;B Stella</title>
+  <desc id="desc">Facciata color avorio con due camere illuminate, terrazza e una mappa astratta con quattro destinazioni.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#343b72"/><stop offset="1" stop-color="#777bb1"/></linearGradient>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#f8edcf"/><stop offset="1" stop-color="#d6b997"/></linearGradient>
+    <linearGradient id="sea" x2="1" y2="0"><stop stop-color="#667ca0"/><stop offset="1" stop-color="#92b0b7"/></linearGradient>
+    <pattern id="tile" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M0 17 17 0l17 17-17 17z" fill="none" stroke="#a87961" stroke-opacity=".42" stroke-width="1.4"/><circle cx="17" cy="17" r="3" fill="#a87961" fill-opacity=".5"/></pattern>
+  </defs>
+  <rect width="1100" height="820" fill="url(#sky)"/>
+  <circle cx="823" cy="167" r="82" fill="#efc27e" opacity=".95"/>
+  <path d="M0 424c151-92 237-24 359-51 157-35 236 13 351 1 132-14 227-93 390-23v469H0z" fill="url(#sea)"/>
+  <path d="M0 479c145-39 211-29 328-18 147 14 240 68 382 44 145-24 250-46 390-20" fill="none" stroke="#e8dec1" stroke-opacity=".55" stroke-width="3"/>
+  <path d="M0 520c132-27 219-8 357 12m138 15c148 19 282-34 435-7" fill="none" stroke="#f6e8ce" stroke-opacity=".42" stroke-width="2"/>
+  <path d="M165 384V225l214-121 219 122v158z" fill="#4f4775"/>
+  <path d="M143 228 378 91l237 137-20 29-217-124-216 123z" fill="#aa755e"/>
+  <path d="M183 245 378 134l201 111v271H183z" fill="url(#wall)"/>
+  <path d="M183 245 378 134l201 111v30L378 172 183 282z" fill="#f8e8c6"/>
+  <path d="M176 623h413v18H176z" fill="#603f40"/>
+  <path d="M202 420h366M200 505h368" stroke="#b28e6e" stroke-width="6"/>
+  <g fill="#78628a"><path d="M221 323a38 38 0 0 1 76 0v53h-76z"/><path d="M457 323a38 38 0 0 1 76 0v53h-76z"/></g>
+  <g fill="#efc27e"><path d="M232 323a27 27 0 0 1 54 0v39h-54z"/><path d="M468 323a27 27 0 0 1 54 0v39h-54z"/></g>
+  <g stroke="#f8edcf" stroke-width="4"><path d="M259 294v68m-27-33h54m208-35v68m-27-33h54"/></g>
+  <path d="M323 424a54 54 0 0 1 108 0v77H323z" fill="#473b61"/>
+  <path d="M336 430a41 41 0 0 1 82 0v67h-82z" fill="#9ab4b6"/>
+  <path d="M369 438h15v59h-15z" fill="#f6dbab"/>
+  <path d="M146 640h488v17H146z" fill="#6e493f"/>
+  <path d="M171 657v26m437-26v26m-330-26v26m226-26v26" stroke="#6e493f" stroke-width="7"/>
+  <rect x="181" y="687" width="43" height="105" rx="20" fill="#434c5d"/>
+  <rect x="537" y="687" width="43" height="105" rx="20" fill="#434c5d"/>
+  <path d="M228 770c13-27 36-41 61-42 27-1 42 21 45 42zm239 0c15-34 38-48 66-47 28 1 47 24 49 47z" fill="#6c7c54"/>
+  <path d="M0 820h1100" stroke="#dbbd94" stroke-width="12"/>
+  <g fill="none" stroke="#f5d8a2" stroke-width="3" stroke-dasharray="8 12" opacity=".9">
+    <path d="M679 593c112-62 145-96 263-101"/>
+    <path d="M680 593c98 10 194 33 322 23"/>
+    <path d="M680 593c47 67 127 109 227 133"/>
+  </g>
+  <g fill="#f7efdc" font-family="Arial,sans-serif"><text x="768" y="450" font-size="17" letter-spacing="4">UN PUNTO DI PARTENZA</text><text x="905" y="495" font-size="18">SORRENTO</text><text x="899" y="623" font-size="18">CAPRI</text><text x="831" y="760" font-size="18">POMPEI · NAPOLI</text></g>
+  <circle cx="676" cy="594" r="13" fill="#e7b66c" stroke="#f8edcf" stroke-width="5"/>
+  <text x="665" y="564" fill="#fff4df" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="3">STELLA</text>
+  <rect width="1100" height="820" fill="url(#tile)" opacity=".11"/>
+</svg>

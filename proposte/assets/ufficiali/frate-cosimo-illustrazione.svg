@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 820" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrazione del pacchero di Gragnano del Frate Cosimo</title>
+  <desc id="desc">Un piatto disegnato con paccheri, funghi porcini e gocce di fonduta di provola affumicata.</desc>
+  <defs>
+    <radialGradient id="table"><stop stop-color="#697155"/><stop offset="1" stop-color="#353b31"/></radialGradient>
+    <radialGradient id="plate"><stop stop-color="#f5e8cd"/><stop offset=".76" stop-color="#e4d0aa"/><stop offset=".8" stop-color="#738070"/><stop offset="1" stop-color="#c4ab7e"/></radialGradient>
+    <linearGradient id="pasta" x2=".85" y2="1"><stop stop-color="#efbd70"/><stop offset="1" stop-color="#bd773e"/></linearGradient>
+    <linearGradient id="melt" x2="0" y2="1"><stop stop-color="#f5db9a"/><stop offset="1" stop-color="#bd7549"/></linearGradient>
+    <filter id="shadow" x="-.2" y="-.2" width="1.4" height="1.5"><feGaussianBlur stdDeviation="15"/></filter>
+  </defs>
+  <rect width="1100" height="820" fill="url(#table)"/>
+  <path d="M0 164h1100M0 406h1100M0 650h1100" stroke="#d0bd8a" stroke-opacity=".12" stroke-width="3"/>
+  <ellipse cx="548" cy="688" rx="375" ry="57" fill="#151b15" opacity=".48" filter="url(#shadow)"/>
+  <ellipse cx="548" cy="424" rx="412" ry="318" fill="url(#plate)" stroke="#f9ecd0" stroke-width="13"/>
+  <ellipse cx="548" cy="424" rx="323" ry="233" fill="#e1c797" stroke="#8f8769" stroke-opacity=".42" stroke-width="4"/>
+  <ellipse cx="548" cy="431" rx="282" ry="191" fill="#835136" opacity=".15"/>
+  <g fill="url(#pasta)" stroke="#9d5f32" stroke-width="8">
+    <ellipse cx="366" cy="372" rx="58" ry="86" transform="rotate(-37 366 372)"/><ellipse cx="465" cy="320" rx="58" ry="86" transform="rotate(-14 465 320)"/>
+    <ellipse cx="562" cy="336" rx="58" ry="86" transform="rotate(12 562 336)"/><ellipse cx="663" cy="377" rx="58" ry="86" transform="rotate(32 663 377)"/>
+    <ellipse cx="408" cy="492" rx="58" ry="86" transform="rotate(19 408 492)"/><ellipse cx="524" cy="470" rx="58" ry="86" transform="rotate(-24 524 470)"/>
+    <ellipse cx="629" cy="493" rx="58" ry="86" transform="rotate(34 629 493)"/>
+  </g>
+  <g fill="#f0d9a5" stroke="#75482e" stroke-width="7">
+    <ellipse cx="349" cy="343" rx="27" ry="20" transform="rotate(-37 349 343)"/><ellipse cx="449" cy="288" rx="27" ry="20" transform="rotate(-14 449 288)"/>
+    <ellipse cx="570" cy="302" rx="27" ry="20" transform="rotate(12 570 302)"/><ellipse cx="690" cy="355" rx="27" ry="20" transform="rotate(32 690 355)"/>
+    <ellipse cx="432" cy="524" rx="27" ry="20" transform="rotate(19 432 524)"/><ellipse cx="500" cy="504" rx="27" ry="20" transform="rotate(-24 500 504)"/>
+    <ellipse cx="663" cy="523" rx="27" ry="20" transform="rotate(34 663 523)"/>
+  </g>
+  <g fill="#684536">
+    <path d="M304 452q28-43 61-4l14 19q-22 20-60 8z"/><path d="M520 270q26-35 51-4l15 15q-16 18-52 15z"/>
+    <path d="M684 456q26-39 53-3l12 18q-19 16-51 12z"/><path d="M467 553q29-28 48 6l10 21q-26 13-52-3z"/>
+  </g>
+  <g fill="none" stroke="url(#melt)" stroke-width="20" stroke-linecap="round">
+    <path d="M344 414c82 32 114-39 201-12s95 92 173 57"/>
+    <path d="M387 520c48-49 111-37 157-4s67 28 111-3"/>
+    <path d="M422 355c36 7 59 36 85 40"/>
+  </g>
+  <g fill="#778759"><path d="M740 314c45-33 74-30 92-9-24 22-52 31-92 9z"/><path d="M324 531c-7-40 4-62 31-71 8 28-3 52-31 71z"/><path d="M657 277c24-31 47-42 73-25-11 27-34 37-73 25z"/></g>
+  <circle cx="238" cy="249" r="3" fill="#f5e8cd" opacity=".7"/><circle cx="837" cy="566" r="4" fill="#f5e8cd" opacity=".7"/>
+  <text x="50" y="80" fill="#f5e8cd" opacity=".86" font-family="Arial,sans-serif" font-size="19" letter-spacing="6">PREAZZANO · IL PIATTO FIRMA</text>
+  <text x="820" y="743" fill="#f5e8cd" font-family="Georgia,serif" font-size="31" font-style="italic">porcini · provola fumé</text>
+</svg>
