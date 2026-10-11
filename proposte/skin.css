@@ -42,3 +42,5 @@
  .theme-casale .art-sun{right:-14%;bottom:-24%;width:95%;height:68%}
  .theme-casale .art-orbit{right:-8%;bottom:-17%;width:102%;height:82%}
 }
+
+.idea-thumb{position:absolute;left:24px;top:72px;width:70px;height:70px;overflow:hidden;border:1px solid var(--accent);border-radius:50%;background:#eee}.idea-thumb img{width:100%;height:100%;display:block;object-fit:cover}.idea-thumb span{position:absolute;inset:0;display:grid;place-items:center;background:rgba(28,34,28,.35);color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.55);font:500 20px Georgia,serif}.idea-card:hover .idea-thumb img{transform:scale(1.08);transition:transform .3s ease}@media(max-width:900px){.idea-thumb{left:16px;width:60px;height:60px}}@media(max-width:650px){.idea-thumb{left:14px;top:67px;width:56px;height:56px}.idea-thumb span{font-size:17px}}

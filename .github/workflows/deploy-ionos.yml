@@ -48,7 +48,7 @@ jobs:
           test -s proposte/app.js
           test -s proposte/proposte.css
           test -s proposte/skin.css
-          test "$(find proposte -mindepth 3 -maxdepth 3 -type f -name index.html | wc -l)" -eq 10
+          test "$(find proposte -mindepth 2 -maxdepth 2 -type f -name index.html | wc -l)" -eq 10
 
       - name: Prepare SSH with pinned host key
         shell: bash
@@ -130,9 +130,15 @@ jobs:
             cmp --silent "proposte/$asset" "$RUNNER_TEMP/deployed-$asset"
           done
           while IFS= read -r file; do
+            curl --fail --silent --show-error --location --compressed \
+              "https://diegodesposito.it/$file" \
+              --output "$RUNNER_TEMP/deployed-photo"
+            cmp --silent "$file" "$RUNNER_TEMP/deployed-photo"
+          done < <(find proposte/assets -type f -print | LC_ALL=C sort)
+          while IFS= read -r file; do
             route="/$(dirname "$file")/"
             curl --fail --silent --show-error --location --compressed \
               "https://diegodesposito.it$route" \
               --output "$RUNNER_TEMP/deployed-preview.html"
             cmp --silent "$file" "$RUNNER_TEMP/deployed-preview.html"
-          done < <(find proposte -mindepth 3 -maxdepth 3 -type f -name index.html | LC_ALL=C sort)
+          done < <(find proposte -mindepth 2 -maxdepth 2 -type f -name index.html | LC_ALL=C sort)

@@ -1,6 +1,7 @@
 const candidates = [
   {
     slug: 'osteria-al-buco', name: 'Osteria Al Buco', kind: 'Osteria · Vico Equense', theme: 'buco',
+    photo: 'assets/pizza-oven.jpg', photoAlt: 'Pizza in un forno a legna', photoBy: 'Brad', photoSource: 'https://unsplash.com/photos/pizza-baking-in-a-wood-fired-oven-KN9FYaoAAik',
     official: 'https://osteriaalbuco.wixsite.com/website',
     headlineA: 'La tradizione', headlineB: 'inizia da qui.',
     intro: 'Un concept editoriale per portare in primo piano l’identità dell’osteria, la proposta di cucina di mare e di terra e la pizza cotta nel forno a legna, con un percorso semplice anche da smartphone.',
@@ -16,6 +17,7 @@ const candidates = [
   },
   {
     slug: 'ristorante-mustafa', name: 'Ristorante Mustafà', kind: 'Ristorante · Marina d’Equa', theme: 'mustafa',
+    photo: 'assets/seafood-pasta.jpg', photoAlt: 'Piatto di pasta ai frutti di mare', photoBy: 'Zakhar Petrov', photoSource: 'https://unsplash.com/photos/seafood-pasta-with-tomatoes-and-a-glass-of-white-wine-48jW8VHfMJw',
     official: 'https://www.ristorantemustafa.it/it/menu/',
     headlineA: 'Dal menu', headlineB: 'al tavolo.',
     intro: 'Una proposta digitale pensata per chi sta scegliendo dove mangiare: menu facile da raggiungere, informazioni essenziali ben ordinate e un percorso diretto verso i canali ufficiali del ristorante.',
@@ -31,6 +33,7 @@ const candidates = [
   },
   {
     slug: 'caseificio-starace', name: 'Caseificio Starace', kind: 'Caseificio · Vico Equense', theme: 'starace',
+    photo: 'assets/cheese-board.jpg', photoAlt: 'Forma di formaggio su un tagliere', photoBy: 'Projeto Café Gato-Mourisco', photoSource: 'https://unsplash.com/photos/a-cheese-board-with-a-piece-of-cheese-on-top-of-it-XM4i9fEHqCg',
     official: 'https://www.caseificiostarace1920.com/',
     headlineA: 'Il sapere', headlineB: 'si fa esperienza.',
     intro: 'Un concept che distingue con immediatezza il racconto del caseificio, le esperienze e i prodotti, aiutando il visitatore a capire quale percorso approfondire.',
@@ -46,6 +49,7 @@ const candidates = [
   },
   {
     slug: 'cerase-vico-equense', name: 'Cerasè', kind: 'Ristorante · Vico Equense', theme: 'cerase',
+    photo: 'assets/seafood-pasta-2.jpg', photoAlt: 'Pasta ai frutti di mare servita a tavola', photoBy: 'Anbinh Pho', photoSource: 'https://unsplash.com/photos/a-bowl-of-pasta-with-seafood-on-a-wooden-table-rz3t3_awonU',
     official: 'https://www.cerasevicoequense.it/',
     headlineA: 'Dalla tavola', headlineB: 'alla permanenza.',
     intro: 'Un concept che mette in relazione il ristorante e Cerasè Apartment, lasciando chiara la scelta iniziale e dando spazio a menu, informazioni e soggiorno.',
@@ -61,6 +65,7 @@ const candidates = [
   },
   {
     slug: 'bb-stella', name: 'B&B Stella', kind: 'Bed & Breakfast · Vico Equense', theme: 'stella',
+    photo: 'assets/hotel-room.jpg', photoAlt: 'Camera di una struttura ricettiva', photoBy: 'Kin Shing Lai', photoSource: 'https://unsplash.com/photos/a-bed-in-a-hotel-room-GOzvLXx4E-E',
     official: 'https://www.bnbstella.it/',
     headlineA: 'Due camere.', headlineB: 'La tua partenza.',
     intro: 'Una pagina accogliente che mette in ordine camere, servizi e informazioni per muoversi sul territorio, rendendo più semplice chiedere disponibilità al canale scelto dalla struttura.',
@@ -76,6 +81,7 @@ const candidates = [
   },
   {
     slug: 'frate-cosimo', name: 'Frate Cosimo', kind: 'Ristorante · Pizzeria · Preazzano', theme: 'frate',
+    photo: 'assets/shrimp-appetizer.jpg', photoAlt: 'Antipasto di mare impiattato', photoBy: 'Madeline Liu', photoSource: 'https://unsplash.com/photos/gourmet-shrimp-appetizer-with-toast-on-wooden-table-rT0ZhyH7dv4',
     official: 'https://www.fratecosimo.it/',
     headlineA: 'Sapori vicani,', headlineB: 'senza giri lunghi.',
     intro: 'Un concept essenziale per trovare da telefono ciò che serve: proposta del locale, menu, indicazioni e contatto, collegati alle fonti ufficiali aggiornate.',
@@ -91,6 +97,7 @@ const candidates = [
   },
   {
     slug: 'caseificio-luigi-parlato', name: 'Caseificio Luigi Parlato', kind: 'Caseificio · Arola', theme: 'parlato',
+    photo: 'assets/cheese-assortment.jpg', photoAlt: 'Selezione di formaggi e pane', photoBy: 'GK3000', photoSource: 'https://unsplash.com/photos/assortment-of-cheeses-bread-and-fruits-on-a-board-NDC10zU2HRw',
     official: 'https://caseificioparlato.it/',
     headlineA: 'Una tradizione', headlineB: 'da tramandare.',
     intro: 'Una proposta di sito che unisce la storia del caseificio, il Provolone del Monaco e le informazioni pratiche per capire come conoscere e acquistare i prodotti.',
@@ -106,6 +113,7 @@ const candidates = [
   },
   {
     slug: 'caseificio-carbone', name: 'Caseificio Carbone', kind: 'Caseificio · Moiano', theme: 'carbone',
+    photo: 'assets/burrata.jpg', photoAlt: 'Burrata, pomodorini e basilico', photoBy: 'Jetts Thanatip', photoSource: 'https://unsplash.com/photos/burrata-cheese-with-tomatoes-and-basil-kkAW965TiPk',
     official: 'https://www.caseificiocarbone.it/',
     headlineA: 'Dalla bottega', headlineB: 'alle persone.',
     intro: 'Un concept che accompagna il visitatore tra specialità casearie e punti vendita, con un percorso pratico per trovare il prodotto e il luogo più comodo.',
@@ -121,6 +129,7 @@ const candidates = [
   },
   {
     slug: 'casale-del-golfo', name: 'Il Casale del Golfo', kind: 'Ospitalità · Moiano', theme: 'casale',
+    photo: 'assets/tuscan-farmhouse.jpg', photoAlt: 'Casale tra le colline al tramonto', photoBy: 'Alan Jiang', photoSource: 'https://unsplash.com/photos/tuscan-farmhouse-on-rolling-hills-at-sunset-iW06DUcrhSY',
     official: 'https://www.ilcasaledelgolfo.it/chi-siamo/',
     headlineA: 'Un luogo,', headlineB: 'più modi di viverlo.',
     intro: 'Una proposta di navigazione per distinguere soggiorno, ristorazione e occasioni speciali, così ogni visitatore può iniziare dal percorso che gli interessa.',
@@ -136,6 +145,7 @@ const candidates = [
   },
   {
     slug: 'ristorante-sant-angelo-monte-faito', name: 'Ristorante Sant’Angelo', kind: 'Ristorante · Monte Faito', theme: 'santangelo',
+    photo: 'assets/sorrento-coast.jpg', photoAlt: 'Panorama del Golfo di Napoli dalla costa sorrentina', photoBy: 'James Dant', photoSource: 'https://unsplash.com/photos/a-body-of-water-with-a-dock-and-mountains-in-the-background-e4dSotPrIMs',
     official: 'https://ristorantesantangelomontefaito.it/',
     headlineA: 'La montagna', headlineB: 'incontra la tavola.',
     intro: 'Un concept per portare in primo piano menu e indicazioni per arrivare al ristorante sul Monte Faito, con una grafica che richiama il paesaggio senza usare foto o marchi dell’attività.',
@@ -172,10 +182,10 @@ function sharedFooter(extra) {
 function renderDirectory() {
   document.title = 'Concept web locali | Diego D’Esposito';
   const cards = candidates.map(function(item, index) {
-    return '<article class="idea-card theme-' + esc(item.theme) + '"><div class="idea-card-top"><span>' + String(index + 1).padStart(2, '0') + ' / 10</span><span>' + esc(item.kind) + '</span></div><div class="idea-mark" aria-hidden="true">' + esc(item.mark) + '</div><h2>' + esc(item.name) + '</h2><p>' + esc(item.first) + '</p><a href="/proposte/' + esc(item.slug) + '/">Apri il concept <span aria-hidden="true">↗</span></a></article>';
+    return '<article class="idea-card theme-' + esc(item.theme) + '"><div class="idea-card-top"><span>' + String(index + 1).padStart(2, '0') + ' / 10</span><span>' + esc(item.kind) + '</span></div><div class="idea-thumb"><img src="/proposte/' + esc(item.photo) + '" alt="" loading="lazy"><span>' + esc(item.mark) + '</span></div><h2>' + esc(item.name) + '</h2><p>' + esc(item.first) + '</p><a href="/proposte/' + esc(item.slug) + '/">Apri il concept <span aria-hidden="true">↗</span></a></article>';
   }).join('');
   app.innerHTML = sharedHeader() +
-    '<main id="contenuto"><section class="directory-hero"><div><p class="overline"><span></span> PENISOLA SORRENTINA · 10 PROPOSTE</p><h1>Idee locali,<br><em>fatte per farsi vedere.</em></h1><p class="directory-intro">Dieci concept originali per immaginare come un sito chiaro, veloce e adatto al telefono possa raccontare un’attività del territorio.</p><p class="directory-note">Sono esercizi visivi indipendenti: ogni contenuto, funzione, contatto e immagine andrà condiviso e approvato dal titolare prima di un eventuale progetto.</p><a class="solid-button" href="mailto:info@diegodesposito.it?subject=Confronto%20su%20un%20concept%20web">Parliamo di un progetto <span aria-hidden="true">↗</span></a></div><div class="directory-orbit" aria-hidden="true"><div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="orbit-card"><small>VICO EQUENSE / WEB STUDIO</small><strong>Una buona<br>prima impressione<br><em>parte da qui.</em></strong><span>10 CONCEPT · 2026</span></div><i class="orbit-dot dot-one"></i><i class="orbit-dot dot-two"></i></div></section><section class="idea-section\" aria-labelledby=\"idea-title\"><div class=\"idea-heading\"><div><p class=\"overline\"><span></span> LA RACCOLTA</p><h2 id=\"idea-title\">Un’idea per<br><em>ogni attività.</em></h2></div><p>Ogni pagina mette in scena una possibile direzione, con contenuti originali e un primo intervento da discutere. I siti ufficiali sono linkati per confronto; nessuna funzione commerciale è attiva qui.</p></div><div class=\"idea-grid\">' + cards + '</div></section></main>' +
+    '<main id="contenuto"><section class="directory-hero"><div><p class="overline"><span></span> PENISOLA SORRENTINA · 10 PROPOSTE</p><h1>Idee locali,<br><em>fatte per farsi vedere.</em></h1><p class="directory-intro">Dieci concept originali per immaginare come un sito chiaro, veloce e adatto al telefono possa raccontare un’attività del territorio.</p><p class="directory-note">Sono esercizi visivi indipendenti: i testi sono proposte e le foto stock sono solo illustrative, non ritraggono le attività. Contenuti e immagini definitivi saranno concordati con i titolari.</p><a class="solid-button" href="mailto:info@diegodesposito.it?subject=Confronto%20su%20un%20concept%20web">Parliamo di un progetto <span aria-hidden="true">↗</span></a></div><div class="directory-orbit" aria-hidden="true"><div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="orbit-card"><small>VICO EQUENSE / WEB STUDIO</small><strong>Una buona<br>prima impressione<br><em>parte da qui.</em></strong><span>10 CONCEPT · 2026</span></div><i class="orbit-dot dot-one"></i><i class="orbit-dot dot-two"></i></div></section><section class="idea-section\" aria-labelledby=\"idea-title\"><div class=\"idea-heading\"><div><p class=\"overline\"><span></span> LA RACCOLTA</p><h2 id=\"idea-title\">Un’idea per<br><em>ogni attività.</em></h2></div><p>Ogni pagina mette in scena una possibile direzione, con contenuti originali e un primo intervento da discutere. I siti ufficiali sono linkati per confronto; nessuna funzione commerciale è attiva qui.</p></div><div class=\"idea-grid\">' + cards + '</div></section></main>' +
     sharedFooter('<a class=\"footer-official\" href=\"mailto:info@diegodesposito.it\">info@diegodesposito.it</a>');
 }
 
@@ -185,7 +195,7 @@ function renderConcept(item) {
     return '<article class="focus-card"><span>' + esc(point[0]) + '</span><h3>' + esc(point[1]) + '</h3><p>' + esc(point[2]) + '</p></article>';
   }).join('');
   app.innerHTML = sharedHeader() +
-    '<main id="contenuto" class="theme-' + esc(item.theme) + '"><section class="concept-hero"><div class="hero-copy"><p class="overline"><span></span> ' + esc(item.kind.toUpperCase()) + ' <i>·</i> CONCEPT ' + String(candidates.indexOf(item) + 1).padStart(2, '0') + '</p><h1>' + esc(item.headlineA) + '<br><em>' + esc(item.headlineB) + '</em></h1><p class="hero-intro">' + esc(item.intro) + '</p><div class="hero-actions"><a class="solid-button" href="#direzione">Scopri la proposta <span aria-hidden="true">↓</span></a><a class="quiet-link" href="' + esc(item.official) + '" target="_blank" rel="nofollow noopener noreferrer">Sito pubblico di riferimento <span aria-hidden="true">↗</span></a></div><p class="hero-footnote">Anteprima grafica · nessuna prenotazione, richiesta o vendita è attiva</p></div><div class="concept-art\" aria-label=\"Composizione grafica originale per il concept\" role=\"img\"><div class=\"art-grid\"></div><div class=\"art-sun\"></div><div class=\"art-line line-a\"></div><div class=\"art-line line-b\"></div><div class=\"art-orbit\"></div><div class=\"art-caption\">' + esc(item.art) + '</div><div class=\"mini-site\"><div class=\"mini-site-top\"><span>' + esc(item.mark) + '</span><i></i><i></i><i></i><small>CONCEPT UI / 2026</small></div><div class=\"mini-site-body\"><p>' + esc(item.kind.toUpperCase()) + '</p><strong>' + esc(item.name) + '</strong><span>' + esc(item.art) + '</span><div class=\"mini-rule\"></div><div class=\"mini-menu\"><b>Scopri</b><b>Informazioni</b><b>Contatti</b></div><div class=\"mini-cta\">PERCORSO DA CONCORDARE <span>↗</span></div></div></div><span class=\"art-index\">0' + String(candidates.indexOf(item) + 1) + ' / 10</span></div></section><section class=\"direction-section\" id=\"direzione\"><div class=\"direction-title\"><p class=\"overline\"><span></span> IPOTESI DI LAVORO</p><h2>Una presenza digitale<br><em>più semplice da usare.</em></h2></div><div class=\"direction-copy\"><p class=\"fact-note\"><span>IL PUNTO DI PARTENZA</span>' + esc(item.fact) + '</p><p>' + esc(item.close) + '</p><a class=\"official-link\" href=\"' + esc(item.official) + '\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Confronta con il sito pubblico <span aria-hidden=\"true\">↗</span></a></div></section><section class=\"focus-section\"><div class=\"focus-heading\"><p class=\"overline\"><span></span> LA DIREZIONE VISIVA</p><p>Una struttura possibile, da adattare insieme a chi gestisce l’attività.</p></div><div class=\"focus-grid\">' + cards + '</div></section><section class=\"plan-section\"><div class=\"plan-intro\"><p class=\"overline\"><span></span> PRIMO INTERVENTO</p><h2>Un progetto piccolo,<br><em>con un obiettivo chiaro.</em></h2><p>' + esc(item.first) + '</p></div><div class=\"plan-steps\"><article><span>01</span><div><h3>Confronto</h3><p>Ascolto dell’obiettivo e verifica dei contenuti e dei canali attuali.</p></div></article><article><span>02</span><div><h3>Prototipo approvato</h3><p>Struttura e grafica si definiscono con chi rappresenta l’attività.</p></div></article><article><span>03</span><div><h3>Sviluppo e consegna</h3><p>Funzioni, tempi e preventivo si concordano prima di iniziare.</p></div></article></div></section><section class=\"concept-contact\"><div><p class=\"overline\"><span></span> PROSSIMO PASSO</p><h2>Da concept<br><em>a progetto condiviso.</em></h2></div><div><p>Questa pagina è una proposta indipendente. Se l’attività è interessata, si parte da un confronto e dai contenuti autorizzati.</p><a class=\"solid-button\" href=\"mailto:info@diegodesposito.it?subject=' + encodeURIComponent('Confronto sul concept web per ' + item.name) + '\">Scrivi a Diego <span aria-hidden=\"true\">↗</span></a><a class=\"quiet-link\" href=\"/proposte/\">Torna ai concept <span aria-hidden=\"true\">↖</span></a></div></section></main>' +
+    '<main id="contenuto" class="theme-' + esc(item.theme) + '"><section class="concept-hero"><div class="hero-copy"><p class="overline"><span></span> ' + esc(item.kind.toUpperCase()) + ' <i>·</i> CONCEPT ' + String(candidates.indexOf(item) + 1).padStart(2, '0') + '</p><h1>' + esc(item.headlineA) + '<br><em>' + esc(item.headlineB) + '</em></h1><p class="hero-intro">' + esc(item.intro) + '</p><div class="hero-actions"><a class="solid-button" href="#direzione">Scopri la proposta <span aria-hidden="true">↓</span></a><a class="quiet-link" href="' + esc(item.official) + '" target="_blank" rel="nofollow noopener noreferrer">Sito pubblico di riferimento <span aria-hidden="true">↗</span></a></div><p class="hero-footnote">Anteprima grafica · nessuna prenotazione, richiesta o vendita è attiva</p></div><div class="concept-art\" style=\"--concept-photo:url(/proposte/' + esc(item.photo) + ')\" aria-label=\"Foto illustrativa: ' + esc(item.photoAlt) + ' (non riferita all’attività)\" role=\"img"><div class=\"art-grid\"></div><div class=\"art-sun\"></div><div class=\"art-line line-a\"></div><div class=\"art-line line-b\"></div><div class=\"art-orbit\"></div><div class=\"art-caption\">' + esc(item.art) + '</div><a class=\"photo-credit\" href=\"' + esc(item.photoSource) + '\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Foto: ' + esc(item.photoBy) + ' / Unsplash ↗</a><div class=\"mini-site\"><div class=\"mini-site-top\"><span>' + esc(item.mark) + '</span><i></i><i></i><i></i><small>CONCEPT UI / 2026</small></div><div class=\"mini-site-body\"><p>' + esc(item.kind.toUpperCase()) + '</p><strong>' + esc(item.name) + '</strong><span>' + esc(item.art) + '</span><div class=\"mini-rule\"></div><div class=\"mini-menu\"><b>Scopri</b><b>Informazioni</b><b>Contatti</b></div><div class=\"mini-cta\">PERCORSO DA CONCORDARE <span>↗</span></div></div></div><span class=\"art-index\">0' + String(candidates.indexOf(item) + 1) + ' / 10</span></div></section><section class=\"direction-section\" id=\"direzione\"><div class=\"direction-title\"><p class=\"overline\"><span></span> IPOTESI DI LAVORO</p><h2>Una presenza digitale<br><em>più semplice da usare.</em></h2></div><div class=\"direction-copy\"><p class=\"fact-note\"><span>IL PUNTO DI PARTENZA</span>' + esc(item.fact) + '</p><p>' + esc(item.close) + '</p><a class=\"official-link\" href=\"' + esc(item.official) + '\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Confronta con il sito pubblico <span aria-hidden=\"true\">↗</span></a></div></section><section class=\"focus-section\"><div class=\"focus-heading\"><p class=\"overline\"><span></span> LA DIREZIONE VISIVA</p><p>Una struttura possibile, da adattare insieme a chi gestisce l’attività.</p></div><div class=\"focus-grid\">' + cards + '</div></section><section class=\"plan-section\"><div class=\"plan-intro\"><p class=\"overline\"><span></span> PRIMO INTERVENTO</p><h2>Un progetto piccolo,<br><em>con un obiettivo chiaro.</em></h2><p>' + esc(item.first) + '</p></div><div class=\"plan-steps\"><article><span>01</span><div><h3>Confronto</h3><p>Ascolto dell’obiettivo e verifica dei contenuti e dei canali attuali.</p></div></article><article><span>02</span><div><h3>Prototipo approvato</h3><p>Struttura e grafica si definiscono con chi rappresenta l’attività.</p></div></article><article><span>03</span><div><h3>Sviluppo e consegna</h3><p>Funzioni, tempi e preventivo si concordano prima di iniziare.</p></div></article></div></section><section class=\"concept-contact\"><div><p class=\"overline\"><span></span> PROSSIMO PASSO</p><h2>Da concept<br><em>a progetto condiviso.</em></h2></div><div><p>Questa pagina è una proposta indipendente. Se l’attività è interessata, si parte da un confronto e dai contenuti autorizzati.</p><a class=\"solid-button\" href=\"mailto:info@diegodesposito.it?subject=' + encodeURIComponent('Confronto sul concept web per ' + item.name) + '\">Scrivi a Diego <span aria-hidden=\"true\">↗</span></a><a class=\"quiet-link\" href=\"/proposte/\">Torna ai concept <span aria-hidden=\"true\">↖</span></a></div></section></main>' +
     sharedFooter('<a class=\"footer-website\" href=\"' + esc(item.official) + '\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Apri sito pubblico di riferimento ↗</a>');
 }
 
