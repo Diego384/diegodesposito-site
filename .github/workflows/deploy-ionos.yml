@@ -45,11 +45,22 @@ jobs:
           test -s robots.txt
           test -s sitemap.xml
           test -s proposte/index.html
-          test -s proposte/app.js
-          test -s proposte/proposte.css
-          test -s proposte/skin.css
-          test -s proposte/pages.css
-          test "$(find proposte -mindepth 2 -maxdepth 2 -type f -name index.html | wc -l)" -eq 10
+          test ! -e proposte/app.js
+          for page in \
+            proposte/caseificio-luigi-parlato/index.html \
+            proposte/osteria-al-buco/index.html \
+            proposte/bb-stella/index.html; do
+            test -s "$page"
+            grep -q 'name="robots" content="noindex,nofollow,noarchive"' "$page"
+          done
+          test "$(find proposte/caseificio-luigi-parlato proposte/osteria-al-buco proposte/bb-stella -type f -name index.html | wc -l)" -eq 12
+          for page in \
+            $(find proposte/caseificio-luigi-parlato proposte/osteria-al-buco proposte/bb-stella -type f -name '*.html' | LC_ALL=C sort); do
+            if grep -Eq '<a[^>]+href="/proposte/' "$page"; then
+              echo "A concept page links to the private proposal directory: $page" >&2
+              exit 1
+            fi
+          done
 
       - name: Prepare SSH with pinned host key
         shell: bash
@@ -94,12 +105,42 @@ jobs:
           set -euo pipefail
           batch_file="$RUNNER_TEMP/proposte.sftp"
           : > "$batch_file"
+          printf -- '-rm /proposte/app.js\n' >> "$batch_file"
+          for old_proposal in \
+            casale-del-golfo \
+            caseificio-carbone \
+            caseificio-starace \
+            cerase-vico-equense \
+            frate-cosimo \
+            ristorante-mustafa \
+            ristorante-sant-angelo-monte-faito; do
+            printf -- '-rm /proposte/%s/index.html\n' "$old_proposal" >> "$batch_file"
+            printf -- '-rmdir /proposte/%s\n' "$old_proposal" >> "$batch_file"
+          done
           while IFS= read -r directory; do
             printf -- '-mkdir /%s\n' "$directory" >> "$batch_file"
-          done < <(find proposte -type d -print | LC_ALL=C sort)
+          done < <(
+            {
+              printf '%s\n' proposte proposte/assets proposte/assets/ufficiali
+              find proposte/caseificio-luigi-parlato proposte/osteria-al-buco proposte/bb-stella -type d -print
+            } | LC_ALL=C sort -u
+          )
           while IFS= read -r file; do
             printf 'put %s /%s\n' "$file" "$file" >> "$batch_file"
-          done < <(find proposte -type f -print | LC_ALL=C sort)
+          done < <(
+            {
+              printf '%s\n' \
+                proposte/index.html \
+                proposte/assets/ufficiali/parlato-provolone.jpg \
+                proposte/assets/ufficiali/buco-pizza.optimized.jpg \
+                proposte/assets/ufficiali/buco-storia.optimized.jpg \
+                proposte/assets/ufficiali/buco-tavola.optimized.jpg \
+                proposte/assets/ufficiali/bb-stella-camera-ampia.jpg \
+                proposte/assets/ufficiali/bb-stella-standard-2.jpg \
+                proposte/assets/ufficiali/vico-equense-panorama.jpg
+              find proposte/caseificio-luigi-parlato proposte/osteria-al-buco proposte/bb-stella -type f -print
+            } | LC_ALL=C sort -u
+          )
           sftp -b "$batch_file" \
             -i "$HOME/.ssh/ionos_deploy_key" \
             -oBatchMode=yes \
@@ -124,22 +165,42 @@ jobs:
             https://diegodesposito.it/sitemap.xml \
             --output "$RUNNER_TEMP/deployed-sitemap.xml"
           cmp --silent sitemap.xml "$RUNNER_TEMP/deployed-sitemap.xml"
-          for asset in app.js proposte.css skin.css pages.css index.html; do
+          curl --fail --silent --show-error --location --compressed \
+            https://diegodesposito.it/proposte/ \
+            --output "$RUNNER_TEMP/deployed-proposte-index.html"
+          cmp --silent proposte/index.html "$RUNNER_TEMP/deployed-proposte-index.html"
+          app_status=$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
+            https://diegodesposito.it/proposte/app.js)
+          test "$app_status" = "404"
+          for asset in \
+            proposte/assets/ufficiali/parlato-provolone.jpg \
+            proposte/assets/ufficiali/buco-pizza.optimized.jpg \
+            proposte/assets/ufficiali/buco-storia.optimized.jpg \
+            proposte/assets/ufficiali/buco-tavola.optimized.jpg \
+            proposte/assets/ufficiali/bb-stella-camera-ampia.jpg \
+            proposte/assets/ufficiali/bb-stella-standard-2.jpg \
+            proposte/assets/ufficiali/vico-equense-panorama.jpg; do
             curl --fail --silent --show-error --location --compressed \
-              "https://diegodesposito.it/proposte/$asset" \
-              --output "$RUNNER_TEMP/deployed-$asset"
-            cmp --silent "proposte/$asset" "$RUNNER_TEMP/deployed-$asset"
-          done
-          while IFS= read -r file; do
-            curl --fail --silent --show-error --location --compressed \
-              "https://diegodesposito.it/$file" \
+              "https://diegodesposito.it/$asset" \
               --output "$RUNNER_TEMP/deployed-photo"
-            cmp --silent "$file" "$RUNNER_TEMP/deployed-photo"
-          done < <(find proposte/assets -type f -print | LC_ALL=C sort)
+            cmp --silent "$asset" "$RUNNER_TEMP/deployed-photo"
+          done
           while IFS= read -r file; do
             route="/$(dirname "$file")/"
             curl --fail --silent --show-error --location --compressed \
               "https://diegodesposito.it$route" \
               --output "$RUNNER_TEMP/deployed-preview.html"
             cmp --silent "$file" "$RUNNER_TEMP/deployed-preview.html"
-          done < <(find proposte -mindepth 2 -maxdepth 2 -type f -name index.html | LC_ALL=C sort)
+          done < <(find proposte/caseificio-luigi-parlato proposte/osteria-al-buco proposte/bb-stella -type f -name index.html | LC_ALL=C sort)
+          for old_proposal in \
+            casale-del-golfo \
+            caseificio-carbone \
+            caseificio-starace \
+            cerase-vico-equense \
+            frate-cosimo \
+            ristorante-mustafa \
+            ristorante-sant-angelo-monte-faito; do
+            old_status=$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
+              "https://diegodesposito.it/proposte/$old_proposal/index.html")
+            test "$old_status" = "404"
+          done
